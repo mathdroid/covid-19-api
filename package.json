@@ -1,0 +1,15 @@
+{
+  "name": "covid19",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "chrome-aws-lambda": "^2.1.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "pbf": "^3.2.1",
+    "puppeteer-core": "^2.1.1"
+  },
+  "devDependencies": {
+    "@now/node": "^1.4.1"
+  }
+}
