@@ -33,7 +33,7 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    padding: 4rem;
+    padding: 0 4rem;
   }
 
   .data-wrapper {
