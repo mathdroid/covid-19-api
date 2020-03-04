@@ -23,6 +23,5 @@ export const getLastUpdate = async () => {
   const feature = (await fetchFeatures(endpoints.lastUpdateDesc))
     .map(attributeSpreader)
     .map(normalizeKeys)[0];
-  console.log(feature);
   return new Date(feature.lastUpdate).toISOString();
 };

@@ -8,10 +8,8 @@ import { endpoints } from "../../util/endpoints";
 
 export default async (_, response: NowResponse) => {
   response.json(
-    response.json(
-      (await fetchFeatures(endpoints.deathDesc))
-        .map(attributeSpreader)
-        .map(normalizeKeys)
-    )
+    (await fetchFeatures(endpoints.deathDesc))
+      .map(attributeSpreader)
+      .map(normalizeKeys)
   );
 };

@@ -24,17 +24,27 @@ function getCss(_theme, _fontSize) {
 
 body {
   height: 627px;
+  padding: 0;
+  margin: 0;
 }
   .wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 100%;
+    padding: 4rem;
+  }
+
+  .data-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .data {
-    font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
   }
@@ -48,6 +58,14 @@ body {
     font-size: 6rem;
     margin-top: 1rem;
   }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  b {
+    margin-left: 0.5rem;
+  }
   `;
 }
 
@@ -55,10 +73,11 @@ interface ParsedRequest {
   confirmed?: number;
   recovered?: number;
   deaths?: number;
+  lastUpdate?: string;
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
-  const { confirmed, recovered, deaths } = parsedReq;
+  const { confirmed, recovered, deaths, lastUpdate } = parsedReq;
   return `<!DOCTYPE html>
 <html>
   <meta charset="utf-8">
@@ -69,20 +88,26 @@ export function getHtml(parsedReq: ParsedRequest) {
   </style>
   <body>
       <div class="wrapper">
-        <div class="data">
-          <div class="heading">Confirmed</div>
-          <div class="value">${confirmed}</div>
-        </div>
+        <div class="data-wrapper font-inter" style="font-weight: bold; font-size: 2rem;">COVID-19</div>
+        <div class="data-wrapper" style="justify-content: space-between;">
+          <div class="data">
+            <div class="heading font-inter">Confirmed</div>
+            <div class="value font-inter">${confirmed}</div>
+          </div>
 
-        <div class="data">
-          <div class="heading">Recovered</div>
-          <div class="value" style="color:green;">${recovered}</div>
-        </div>
+          <div class="data">
+            <div class="heading font-inter">Recovered</div>
+            <div class="value font-inter" style="color:green;">${recovered}</div>
+          </div>
 
-        <div class="data">
-          <div class="heading">Deaths</div>
-          <div class="value" style="color:red;">${deaths}</div>
+          <div class="data">
+            <div class="heading font-inter">Deaths</div>
+            <div class="value font-inter" style="color:red;">${deaths}</div>
+          </div>
         </div>
+        <div class="data-wrapper font-inter">
+          Last Update: <b>${lastUpdate}</b>
+        <div>
       </div>
   </body>
 </html>`;
