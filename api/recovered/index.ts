@@ -1,6 +1,17 @@
 import { NowResponse } from "@now/node";
-import { getRecovered } from "../_lib/api";
+import {
+  fetchFeatures,
+  attributeSpreader,
+  normalizeKeys
+} from "../../util/data";
+import { endpoints } from "../../util/endpoints";
 
 export default async (_, response: NowResponse) => {
-  response.json(await getRecovered());
+  response.json(
+    response.json(
+      (await fetchFeatures(endpoints.recoveredDesc))
+        .map(attributeSpreader)
+        .map(normalizeKeys)
+    )
+  );
 };

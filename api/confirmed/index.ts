@@ -1,6 +1,15 @@
 import { NowResponse } from "@now/node";
-import { getConfirmed } from "../_lib/api";
+import {
+  fetchFeatures,
+  attributeSpreader,
+  normalizeKeys
+} from "../../util/data";
+import { endpoints } from "../../util/endpoints";
 
 export default async (_, response: NowResponse) => {
-  response.json(await getConfirmed());
+  response.json(
+    (await fetchFeatures(endpoints.confirmedDesc))
+      .map(attributeSpreader)
+      .map(normalizeKeys)
+  );
 };

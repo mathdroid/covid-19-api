@@ -1,8 +1,8 @@
 import { NowRequest, NowResponse } from "@now/node";
-import { getHtml } from "./_lib/template";
-import { writeTempFile, pathToFileURL } from "./_lib/file";
-import { getScreenshot } from "./_lib/chromium";
-import { getConfirmed, getRecovered, getDeaths } from "./_lib/api";
+import { getHtml } from "../util/template";
+import { writeTempFile, pathToFileURL } from "../util/file";
+import { getScreenshot } from "../util/chromium";
+import { getConfirmed, getRecovered, getDeaths } from "../util/api";
 
 const isDev = process.env.NOW_REGION === "dev1";
 const isHtmlDebug = process.env.OG_HTML_DEBUG === "1";

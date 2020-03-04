@@ -1,6 +1,6 @@
 import { NowResponse } from "@now/node";
 
-import { getConfirmed, getRecovered, getDeaths } from "./_lib/api";
+import { getConfirmed, getRecovered, getDeaths } from "../util/api";
 
 export default async (_, response: NowResponse) => {
   const [confirmed, recovered, deaths] = await Promise.all([

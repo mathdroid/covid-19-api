@@ -1,8 +1,11 @@
 import { NowResponse } from "@now/node";
-
-import { getDailyCases } from "./_lib/api";
+import { fetchFeatures, attributeSpreader, normalizeKeys } from "../util/data";
+import { endpoints } from "../util/endpoints";
 
 export default async (_, response: NowResponse) => {
-  const cases = await getDailyCases;
-  response.json(cases);
+  response.json(
+    (await fetchFeatures(endpoints.casesTimeSeries))
+      .map(attributeSpreader)
+      .map(normalizeKeys)
+  );
 };
