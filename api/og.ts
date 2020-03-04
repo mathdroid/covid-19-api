@@ -1,7 +1,7 @@
 import { NowRequest, NowResponse } from "@now/node";
-import { getHtml } from "./lib/template";
-import { writeTempFile, pathToFileURL } from "./lib/file";
-import { getScreenshot } from "./lib/chromium";
+import { getHtml } from "../util/template";
+import { writeTempFile, pathToFileURL } from "../util/file";
+import { getScreenshot } from "../util/chromium";
 import { getConfirmed, getRecovered, getDeaths } from "../util/data";
 
 const isDev = process.env.NOW_REGION === "dev1";
@@ -25,10 +25,6 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     const fileUrl = pathToFileURL(filePath);
     const file = await getScreenshot(fileUrl, isDev);
     res.setHeader("Content-Type", `image/png`);
-    res.setHeader(
-      "Cache-Control",
-      `public, immutable, no-transform, s-maxage=31536000, max-age=31536000`
-    );
     res.end(file);
   } catch (e) {
     res.statusCode = 500;

@@ -1,27 +1,32 @@
 import fetch from "isomorphic-unfetch";
 
-import { extractSingleValue } from "./index";
+export const attributeSpreader = ({ attributes }) => ({
+  ...attributes
+});
 
-export const getConfirmed = async () => {
-  const res = await fetch(
-    "https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/FeatureServer/1/query?f=json&where=Confirmed%20%3E%200&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22,%22onStatisticField%22%3A%22Confirmed%22,%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true"
-  );
-  const { features } = await res.json();
-  return extractSingleValue(features);
+const pascalSnakeToCamel = string => {
+  const [first, ...rest] = string.split("_");
+  return `${first.toLowerCase()}${rest.join("")}`;
 };
 
-export const getRecovered = async () => {
-  const res = await fetch(
-    "https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/FeatureServer/1/query?f=json&where=Confirmed%20%3E%200&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22,%22onStatisticField%22%3A%22Recovered%22,%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true"
-  );
-  const { features } = await res.json();
-  return extractSingleValue(features);
+const idKeyFilter = ([key, _]) => key !== "OBJECTID";
+
+export const normalizeKeys = object => {
+  return Object.entries(object)
+    .filter(idKeyFilter)
+    .reduce((previous, [currentKey, currentValue]) => {
+      return {
+        ...previous,
+        [pascalSnakeToCamel(currentKey)]: currentValue
+      };
+    }, {});
 };
 
-export const getDeaths = async () => {
-  const res = await fetch(
-    "https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/FeatureServer/1/query?f=json&where=Confirmed%20%3E%200&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22,%22onStatisticField%22%3A%22Deaths%22,%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true"
-  );
-  const { features } = await res.json();
-  return extractSingleValue(features);
+export const extractSingleValue = features =>
+  (features[0] && features[0].attributes && features[0].attributes.value) || 0;
+
+export const fetchFeatures = async url => {
+  const response = await fetch(url);
+  const { features } = await response.json();
+  return features;
 };
