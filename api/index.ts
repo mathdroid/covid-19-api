@@ -1,12 +1,20 @@
 import { NowResponse } from "@now/node";
 
-import { getConfirmed, getRecovered, getDeaths } from "../util/api";
+import {
+  getConfirmed,
+  getRecovered,
+  getDeaths,
+  getLastUpdate
+} from "../util/api";
+import { fetchFeatures } from "../util/data";
+import { endpoints } from "../util/endpoints";
 
 export default async (_, response: NowResponse) => {
-  const [confirmed, recovered, deaths] = await Promise.all([
+  const [confirmed, recovered, deaths, lastUpdate] = await Promise.all([
     getConfirmed(),
     getRecovered(),
-    getDeaths()
+    getDeaths(),
+    getLastUpdate()
   ]);
 
   response.json({
@@ -24,6 +32,7 @@ export default async (_, response: NowResponse) => {
     },
     daily: "https://covid19.mathdro.id/api/daily",
     image: "https://covid19.mathdro.id/api/og",
-    source: "https://github.com/mathdroid/covid19"
+    source: "https://github.com/mathdroid/covid19",
+    lastUpdate
   });
 };
