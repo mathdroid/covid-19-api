@@ -1,6 +1,6 @@
 import { NowResponse } from "@now/node";
 
-import { getDailyCases } from "../util/api";
+import { getDailyCases } from "./_lib/api";
 
 export default async (_, response: NowResponse) => {
   const cases = await getDailyCases;
