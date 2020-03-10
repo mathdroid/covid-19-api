@@ -28,7 +28,7 @@ export const matchCountryCode = update => {
   const countryCode = Object.entries(countries).filter(
     ([code, country]) => country === countryName
   );
-  update.countryCode = countryCode[0][0];
+  update.countryCode = countryCode[0];
   return update;
 };
 
