@@ -2,7 +2,8 @@ import { NowResponse } from "@now/node";
 import {
   fetchFeatures,
   attributeSpreader,
-  normalizeKeys
+  normalizeKeys,
+  matchCountryCode
 } from "../../util/data";
 import { endpoints } from "../../util/endpoints";
 
@@ -11,5 +12,6 @@ export default async (_, response: NowResponse) => {
     (await fetchFeatures(endpoints.confirmedDesc))
       .map(attributeSpreader)
       .map(normalizeKeys)
+      .map(matchCountryCode)
   );
 };
