@@ -23,10 +23,13 @@ export const normalizeKeys = object => {
     }, {});
 };
 
-export const matchCountryCode = countryName => {
-  return Object.entries(countries).filter(
+export const matchCountryCode = update => {
+  const countryName = update.countryRegion;
+  const countryCode = Object.entries(countries).filter(
     ([code, country]) => country === countryName
   );
+  update.countryCode = countryCode[0][0];
+  return update;
 };
 
 export const extractSingleValue = features =>
