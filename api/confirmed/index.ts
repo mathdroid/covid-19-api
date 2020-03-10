@@ -3,7 +3,8 @@ import {
   fetchFeatures,
   attributeSpreader,
   normalizeKeys,
-  matchCountryCode
+  matchCountryCode,
+  getIso3Code
 } from "../../util/data";
 import { endpoints } from "../../util/endpoints";
 
@@ -13,5 +14,6 @@ export default async (_, response: NowResponse) => {
       .map(attributeSpreader)
       .map(normalizeKeys)
       .map(matchCountryCode)
+      .map(getIso3Code)
   );
 };
