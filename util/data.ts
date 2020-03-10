@@ -24,11 +24,12 @@ export const normalizeKeys = object => {
 };
 
 export const matchCountryCode = update => {
-  const countryName = update.countryRegion;
-  const countryCode = Object.entries(countries).filter(
-    ([code, country]) => country === countryName
+  const countryCode = Object.entries(countries).find(
+    country => country[0] === update.countryRegion
   );
-  update.countryCode = countryCode[0];
+  if (countryCode) {
+    update.countryCode = countryCode[1];
+  }
   return update;
 };
 
