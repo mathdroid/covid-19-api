@@ -1,4 +1,6 @@
 import fetch from "isomorphic-unfetch";
+import * as countries from "./countries.json";
+import * as iso3 from "./iso3.json";
 
 export const attributeSpreader = ({ attributes }) => ({
   ...attributes
@@ -20,6 +22,26 @@ export const normalizeKeys = object => {
         [pascalSnakeToCamel(currentKey)]: currentValue
       };
     }, {});
+};
+
+export const matchCountryCode = update => {
+  const countryCode = Object.entries(countries).find(
+    country => country[0] === update.countryRegion
+  );
+  if (countryCode) {
+    update.iso2 = countryCode[1];
+  }
+  return update;
+};
+
+export const getIso3Code = update => {
+  const countryCode3 = Object.entries(iso3).find(
+    country => country[0] === update.iso2
+  );
+  if (countryCode3) {
+    update.iso3 = countryCode3[1];
+  }
+  return update;
 };
 
 export const extractSingleValue = features =>
