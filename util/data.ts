@@ -52,10 +52,18 @@ export const extractSingleValue = features =>
     features[0].attributes.value) ||
   0;
 
+const isEmpty = obj => {
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      return false;
+    }
+  }
+  return true;
+};
+
 export const fetchFeatures = async (url, query = {}) => {
-  console.log({ url, query });
-  const response = await fetch(`${url}?${qs.stringify(query)}`);
+  const endpoint = `${url}${isEmpty(query) ? "" : `?${qs.stringify(query)}`}`;
+  const response = await fetch(endpoint);
   const { features } = await response.json();
-  console.log(features);
   return features;
 };

@@ -67,3 +67,6 @@ export const queryTotalRecovered = (countryRegion?: string) =>
     where: withCountryRegion(where.recovered, countryRegion),
     field: "Recovered"
   });
+
+export const queryCasesTimeSeries = () =>
+  createArrayQuery({ where: "1=1", orderByFields: "Report_Date_String asc" });
