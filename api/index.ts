@@ -28,11 +28,18 @@ export default async (_, response: NowResponse) => {
       value: deaths,
       detail: "https://covid19.mathdro.id/api/deaths"
     },
-    daily: "https://covid19.mathdro.id/api/daily",
+    dailySummary: "https://covid19.mathdro.id/api/daily",
+    dailyTimeSeries: {
+      pattern: "https://covid19.mathdro.id/api/daily/[dateString]",
+      example: "https://covid19.mathdro.id/api/daily/2-14-2020"
+    },
     image: "https://covid19.mathdro.id/api/og",
     source: "https://github.com/mathdroid/covid19",
     countries: "https://covid19.mathdro.id/api/countries",
-    countryDetail: "https://covid19.mathdro.id/api/countries/[country]",
+    countryDetail: {
+      pattern: "https://covid19.mathdro.id/api/countries/[country]",
+      example: "https://covid19.mathdro.id/api/countries/USA"
+    },
     lastUpdate
   });
 };
