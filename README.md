@@ -8,9 +8,17 @@
 
 2. Install deps (`yarn`, `npm install`)
 
-3. Install and register to ZEIT Now if you haven't. This project is exclusively made for the platform.
+3. Install and register to [ZEIT Now](https://zeit.co/now) if you haven't. This project is exclusively made for the platform.
 
 4. `now dev` to run a local dev deployment, `now` to publish.
+
+## Showcase
+
+- [17 responsible live visualizations about the coronavirus, for you to use](https://blog.datawrapper.de/coronaviruscharts/), (Web) by [Datawrapper](https://datawrapper.de)
+
+- [Android kotlin-mvvm-covid19](https://github.com/rizmaulana/kotlin-mvvm-covid19), (Android) by [Rizki Maulana](https://github.com/rizmaulana)
+
+- [https://github.com/andreyyoshua/Covid-19](https://github.com/andreyyoshua/Covid-19), (iOS) by [Andrey Yoshua](https://github.com/andreyyoshua)
 
 ## License
 

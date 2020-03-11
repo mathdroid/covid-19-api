@@ -7,10 +7,11 @@ import {
   getIso3Code
 } from "../../util/data";
 import { endpoints } from "../../util/endpoints";
+import { queryRecovered } from "../../util/query";
 
 export default async (_, response: NowResponse) => {
   response.json(
-    (await fetchFeatures(endpoints.recoveredDesc))
+    (await fetchFeatures(endpoints.cases, queryRecovered()))
       .map(attributeSpreader)
       .map(normalizeKeys)
       .map(matchCountryCode)

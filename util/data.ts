@@ -1,6 +1,7 @@
 import fetch from "isomorphic-unfetch";
-import * as countries from "./countries.json";
-import * as iso3 from "./iso3.json";
+import qs from "qs";
+
+import { countries, iso3 } from "./countries";
 
 export const attributeSpreader = ({ attributes }) => ({
   ...attributes
@@ -45,10 +46,16 @@ export const getIso3Code = update => {
 };
 
 export const extractSingleValue = features =>
-  (features[0] && features[0].attributes && features[0].attributes.value) || 0;
+  (features &&
+    features[0] &&
+    features[0].attributes &&
+    features[0].attributes.value) ||
+  0;
 
-export const fetchFeatures = async url => {
-  const response = await fetch(url);
+export const fetchFeatures = async (url, query = {}) => {
+  console.log({ url, query });
+  const response = await fetch(`${url}?${qs.stringify(query)}`);
   const { features } = await response.json();
+  console.log(features);
   return features;
 };

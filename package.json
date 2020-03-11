@@ -7,9 +7,11 @@
     "chrome-aws-lambda": "^2.1.1",
     "isomorphic-unfetch": "^3.0.0",
     "pbf": "^3.2.1",
-    "puppeteer-core": "^2.1.1"
+    "puppeteer-core": "^2.1.1",
+    "qs": "^6.9.1"
   },
   "devDependencies": {
-    "@now/node": "^1.4.1"
+    "@now/node": "^1.4.1",
+    "@types/qs": "^6.9.1"
   }
 }
