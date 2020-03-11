@@ -7,8 +7,11 @@ export const attributeSpreader = ({ attributes }) => ({
   ...attributes
 });
 
-const pascalSnakeToCamel = string => {
-  const [first, ...rest] = string.split("_");
+const sanitizeToPascal = (str: string) =>
+  str.replace("/", "_").replace(" ", "_");
+
+const pascalSnakeToCamel = (str: string) => {
+  const [first, ...rest] = sanitizeToPascal(str).split("_");
   return `${first.toLowerCase()}${rest.join("")}`;
 };
 
