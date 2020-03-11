@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from "@now/node";
+import { NowResponse } from "@now/node";
 import { getHtml } from "../util/template";
 import { writeTempFile, pathToFileURL } from "../util/file";
 import { getScreenshot } from "../util/chromium";

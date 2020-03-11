@@ -43,14 +43,13 @@ export const getTotalDeaths = async (countryName?: string) => {
 };
 
 export const getLastUpdate = async (countryName?: string) => {
-  const feature = (
-    await fetchFeatures(
-      endpoints.cases,
-      queryLastUpdate(getCountryName(countryName))
-    )
-  )
-    .map(attributeSpreader)
-    .map(normalizeKeys)[0];
+  const f = await fetchFeatures(
+    endpoints.cases,
+    queryLastUpdate(getCountryName(countryName))
+  );
+  const feature = f
+    ? f.map(attributeSpreader).map(normalizeKeys)[0]
+    : { lastUpdate: new Date() };
   return new Date(feature.lastUpdate).toISOString();
 };
 
