@@ -1,7 +1,8 @@
 const where = {
   confirmed: `(Confirmed > 0)`,
   deaths: `(Confirmed > 0) AND (Deaths > 0)`,
-  recovered: `(Confirmed > 0) AND (Recovered <> 0)`
+  recovered: `(Confirmed > 0) AND (Recovered <> 0)`,
+  all: `1=1`
 };
 
 export const createQuery = ({ where }) => ({
@@ -69,4 +70,7 @@ export const queryTotalRecovered = (countryRegion?: string) =>
   });
 
 export const queryCasesTimeSeries = () =>
-  createArrayQuery({ where: "1=1", orderByFields: "Report_Date_String asc" });
+  createArrayQuery({
+    where: where.all,
+    orderByFields: "Report_Date_String asc"
+  });

@@ -1,6 +1,6 @@
 import { NowResponse, NowRequest } from "@now/node";
 
-import { extractSingleValue } from "../../../util/data";
+import globalHandler from "../../index";
 import {
   getTotalConfirmed,
   getTotalRecovered,
@@ -11,6 +11,9 @@ import {
 export default async (req: NowRequest, response: NowResponse) => {
   try {
     const country = req.query.country as string;
+    if (typeof country === undefined) {
+      return globalHandler(req, response);
+    }
     const [confirmed, recovered, deaths, lastUpdate] = await Promise.all([
       getTotalConfirmed(country),
       getTotalRecovered(country),
