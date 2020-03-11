@@ -3,9 +3,9 @@ import { getHtml } from "../util/template";
 import { writeTempFile, pathToFileURL } from "../util/file";
 import { getScreenshot } from "../util/chromium";
 import {
-  getConfirmed,
-  getRecovered,
-  getDeaths,
+  getTotalConfirmed,
+  getTotalRecovered,
+  getTotalDeaths,
   getLastUpdate
 } from "../util/api";
 
@@ -15,9 +15,9 @@ const isHtmlDebug = process.env.OG_HTML_DEBUG === "1";
 export default async function handler(_, res: NowResponse) {
   try {
     const [confirmed, recovered, deaths, lastUpdate] = await Promise.all([
-      getConfirmed(),
-      getRecovered(),
-      getDeaths(),
+      getTotalConfirmed(),
+      getTotalRecovered(),
+      getTotalDeaths(),
       getLastUpdate()
     ]);
     const html = getHtml({ confirmed, recovered, deaths, lastUpdate });
