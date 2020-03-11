@@ -6,7 +6,8 @@ import {
   getTotalConfirmed,
   getTotalRecovered,
   getTotalDeaths,
-  getLastUpdate
+  getLastUpdate,
+  getDailyCases
 } from "../util/api";
 
 const isDev = process.env.NOW_REGION === "dev1";
@@ -14,13 +15,26 @@ const isHtmlDebug = process.env.OG_HTML_DEBUG === "1";
 
 export default async function handler(_, res: NowResponse) {
   try {
-    const [confirmed, recovered, deaths, lastUpdate] = await Promise.all([
+    const [
+      confirmed,
+      recovered,
+      deaths,
+      lastUpdate,
+      dailyCases
+    ] = await Promise.all([
       getTotalConfirmed(),
       getTotalRecovered(),
       getTotalDeaths(),
-      getLastUpdate()
+      getLastUpdate(),
+      getDailyCases()
     ]);
-    const html = getHtml({ confirmed, recovered, deaths, lastUpdate });
+    const html = getHtml({
+      confirmed,
+      recovered,
+      deaths,
+      lastUpdate,
+      dailyCases
+    });
     if (isHtmlDebug) {
       res.setHeader("Content-Type", "text/html");
       res.end(html);

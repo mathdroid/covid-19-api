@@ -10,7 +10,8 @@ import {
   queryTotalDeaths,
   queryTotalConfirmed,
   queryTotalRecovered,
-  queryLastUpdate
+  queryLastUpdate,
+  queryCasesTimeSeries
 } from "./query";
 import { getCountryName } from "./countries";
 
@@ -52,3 +53,8 @@ export const getLastUpdate = async (countryName?: string) => {
     .map(normalizeKeys)[0];
   return new Date(feature.lastUpdate).toISOString();
 };
+
+export const getDailyCases = async () =>
+  (await fetchFeatures(endpoints.casesTime, queryCasesTimeSeries()))
+    .map(attributeSpreader)
+    .map(normalizeKeys);
