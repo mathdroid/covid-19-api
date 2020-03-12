@@ -1,7 +1,10 @@
-import fetch from "isomorphic-unfetch";
+import unfetch from "isomorphic-unfetch";
 import qs from "qs";
+import withRetry from "@zeit/fetch-retry";
 
 import { countries, iso3 } from "./countries";
+
+const fetch = withRetry(unfetch);
 
 export const attributeSpreader = ({ attributes }) => ({
   ...attributes
