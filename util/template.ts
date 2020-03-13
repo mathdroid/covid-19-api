@@ -7,7 +7,7 @@ const boldInter = readFileSync(
   `${__dirname}/../fonts/Inter-Bold.woff2`
 ).toString("base64");
 
-function getCss(_theme, _fontSize) {
+function getCss(height: number) {
   return `
   @font-face {
     font-family: 'Inter';
@@ -23,7 +23,7 @@ function getCss(_theme, _fontSize) {
 }
 
 body {
-  height: 627px;
+  height: ${height}px;
   padding: 0;
   margin: 0;
   background: linear-gradient(-45deg, rgba(238,238,238,1) 0%, rgba(240,240,240,1) 25%, rgba(255,255,255,1) 100%);
@@ -139,17 +139,17 @@ sparkline.sparkline(svgs[0], [${dailyCases
     .join(", ")}]);
 svgs[1].setAttribute("height", Math.floor(${
     dailyCases.slice(-1)[0].totalRecovered
-  }/${dailyCases.slice(-1)[0].totalConfirmed} * 627))
+  }/${dailyCases.slice(-1)[0].totalConfirmed} * ${height}))
 sparkline.sparkline(svgs[1], [${dailyCases
     .map(d => d.totalRecovered || 0)
     .join(", ")}]);
 svgs[2].setAttribute("height", Math.floor(${deaths}/${
     dailyCases.slice(-1)[0].totalConfirmed
-  } * 627))
+  } * ${height}))
 sparkline.sparkline(svgs[2], [100,100,100]);
 svgs[3].setAttribute("height", Math.floor(${
     dailyCases.slice(-1)[0].otherLocations
-  }/${dailyCases.slice(-1)[0].totalConfirmed} * 627))
+  }/${dailyCases.slice(-1)[0].totalConfirmed} *  ${height}))
 sparkline.sparkline(svgs[3], [${dailyCases
     .map(d => d.otherLocations || 0)
     .join(", ")}]);
