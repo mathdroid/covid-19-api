@@ -98,10 +98,20 @@ interface ParsedRequest {
   deaths?: number;
   lastUpdate?: string;
   dailyCases: any[];
+  width: number;
+  height: number;
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
-  const { confirmed, recovered, deaths, lastUpdate, dailyCases } = parsedReq;
+  const {
+    confirmed,
+    recovered,
+    deaths,
+    lastUpdate,
+    dailyCases,
+    width,
+    height
+  } = parsedReq;
   return `<!DOCTYPE html>
 <html>
   <head>
@@ -116,10 +126,10 @@ export function getHtml(parsedReq: ParsedRequest) {
   <body>
   
   <!-- width, height and stroke-width attributes must be defined on the target SVG -->
-<svg class="sparkline black" width="1200" height="627" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; bottom: 0;"></svg>
-<svg class="sparkline green" width="1200" height="627" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; bottom: 0;"></svg>
-<svg class="sparkline red" width="1200" height="627" stroke-width="2" style="position: absolute; z-index:-1; opacity:0.5; bottom: 0;" stroke-dasharray="5,5"></svg>
-<svg class="sparkline orange" width="1200" height="627" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; bottom: 0;"></svg>
+<svg class="sparkline black" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; bottom: 0;"></svg>
+<svg class="sparkline green" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; bottom: 0;"></svg>
+<svg class="sparkline red" width="${width}" height="${height}" stroke-width="2" style="position: absolute; z-index:-1; opacity:0.5; bottom: 0;" stroke-dasharray="5,5"></svg>
+<svg class="sparkline orange" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; bottom: 0;"></svg>
 
 <script>
 

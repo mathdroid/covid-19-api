@@ -1,4 +1,4 @@
-import { NowResponse } from "@now/node";
+import { NowResponse, NowRequest } from "@now/node";
 import { getHtml } from "../util/template";
 import { writeTempFile, pathToFileURL } from "../util/file";
 import { getScreenshot } from "../util/chromium";
@@ -13,8 +13,10 @@ import {
 const isDev = process.env.NOW_REGION === "dev1";
 const isHtmlDebug = process.env.OG_HTML_DEBUG === "1";
 
-export default async function handler(_, res: NowResponse) {
+export default async function handler(req: NowRequest, res: NowResponse) {
   try {
+    const width = parseInt(req.query.width as string, 10) || 1200;
+    const height = parseInt(req.query.height as string, 10) || 627;
     const [
       confirmed,
       recovered,
@@ -33,7 +35,9 @@ export default async function handler(_, res: NowResponse) {
       recovered,
       deaths,
       lastUpdate,
-      dailyCases
+      dailyCases,
+      width,
+      height
     });
     if (isHtmlDebug) {
       res.setHeader("Content-Type", "text/html");
@@ -43,7 +47,7 @@ export default async function handler(_, res: NowResponse) {
     const text = "textwoot";
     const filePath = await writeTempFile(text, html);
     const fileUrl = pathToFileURL(filePath);
-    const file = await getScreenshot(fileUrl, isDev);
+    const file = await getScreenshot(fileUrl, isDev, width, height);
     res.setHeader("Content-Type", `image/png`);
     res.end(file);
   } catch (e) {

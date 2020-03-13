@@ -13,9 +13,14 @@ async function getPage(isDev: boolean) {
   return _page;
 }
 
-export async function getScreenshot(url: string, isDev: boolean) {
+export async function getScreenshot(
+  url: string,
+  isDev: boolean,
+  width: number = 1200,
+  height: number = 627
+) {
   const page = await getPage(isDev);
-  await page.setViewport({ width: 1200, height: 627 });
+  await page.setViewport({ width, height });
   await page.goto(url);
   const file = await page.screenshot({ type: "png" });
   return file;
