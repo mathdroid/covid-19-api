@@ -7,7 +7,7 @@ const boldInter = readFileSync(
   `${__dirname}/../fonts/Inter-Bold.woff2`
 ).toString("base64");
 
-function getCss(height: number) {
+function getCss(width: number, height: number) {
   return `
   @font-face {
     font-family: 'Inter';
@@ -23,6 +23,7 @@ function getCss(height: number) {
 }
 
 body {
+  width: ${width}px;
   height: ${height}px;
   padding: 0;
   margin: 0;
@@ -119,17 +120,22 @@ export function getHtml(parsedReq: ParsedRequest) {
     <title>Generated Image</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        ${getCss(height)}
+        ${getCss(width, height)}
     </style>
     <script src="https://cdn.rawgit.com/fnando/sparkline/master/dist/sparkline.js"></script>
   </head>
   <body>
   
   <!-- width, height and stroke-width attributes must be defined on the target SVG -->
-<svg class="sparkline black" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; bottom: 0;"></svg>
-<svg class="sparkline green" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; bottom: 0;"></svg>
-<svg class="sparkline red" width="${width}" height="${height}" stroke-width="2" style="position: absolute; z-index:-1; opacity:0.5; bottom: 0;" stroke-dasharray="5,5"></svg>
-<svg class="sparkline orange" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; bottom: 0;"></svg>
+<svg class="sparkline black" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5;"></svg>
+<svg class="sparkline green" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; top: ${1024 -
+    Math.floor((recovered / confirmed) * height)}px;"></svg>
+<svg class="sparkline red" width="${width}" height="${height}" stroke-width="2" style="position: absolute; z-index:-1; opacity:0.5; top: ${1024 -
+    Math.floor((deaths / confirmed) * height)}px;" stroke-dasharray="5,5"></svg>
+<svg class="sparkline orange" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; top: ${1024 -
+    Math.floor(
+      (dailyCases.slice(-1)[0].otherLocations / confirmed) * height
+    )}px;"></svg>
 
 <script>
 
@@ -139,17 +145,15 @@ sparkline.sparkline(svgs[0], [${dailyCases
     .join(", ")}]);
 svgs[1].setAttribute("height", Math.floor(${
     dailyCases.slice(-1)[0].totalRecovered
-  }/${dailyCases.slice(-1)[0].totalConfirmed} * ${height}))
+  }/${confirmed} * ${height}))
 sparkline.sparkline(svgs[1], [${dailyCases
     .map(d => d.totalRecovered || 0)
     .join(", ")}]);
-svgs[2].setAttribute("height", Math.floor(${deaths}/${
-    dailyCases.slice(-1)[0].totalConfirmed
-  } * ${height}))
+svgs[2].setAttribute("height", Math.floor(${deaths}/${confirmed} * ${height}))
 sparkline.sparkline(svgs[2], [100,100,100]);
 svgs[3].setAttribute("height", Math.floor(${
     dailyCases.slice(-1)[0].otherLocations
-  }/${dailyCases.slice(-1)[0].totalConfirmed} *  ${height}))
+  }/${confirmed} *  ${height}))
 sparkline.sparkline(svgs[3], [${dailyCases
     .map(d => d.otherLocations || 0)
     .join(", ")}]);
