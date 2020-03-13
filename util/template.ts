@@ -128,11 +128,11 @@ export function getHtml(parsedReq: ParsedRequest) {
   
   <!-- width, height and stroke-width attributes must be defined on the target SVG -->
 <svg class="sparkline black" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5;"></svg>
-<svg class="sparkline green" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; top: ${1024 -
+<svg class="sparkline green" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; top: ${height -
     Math.floor((recovered / confirmed) * height)}px;"></svg>
-<svg class="sparkline red" width="${width}" height="${height}" stroke-width="2" style="position: absolute; z-index:-1; opacity:0.5; top: ${1024 -
+<svg class="sparkline red" width="${width}" height="${height}" stroke-width="2" style="position: absolute; z-index:-1; opacity:0.5; top: ${height -
     Math.floor((deaths / confirmed) * height)}px;" stroke-dasharray="5,5"></svg>
-<svg class="sparkline orange" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; top: ${1024 -
+<svg class="sparkline orange" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; top: ${height -
     Math.floor(
       (dailyCases.slice(-1)[0].otherLocations / confirmed) * height
     )}px;"></svg>

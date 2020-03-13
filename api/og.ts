@@ -11,7 +11,7 @@ import {
 } from "../util/api";
 
 const isDev = process.env.NOW_REGION === "dev1";
-const isHtmlDebug = process.env.OG_HTML_DEBUG === "1";
+const isHtmlDebug = true || process.env.OG_HTML_DEBUG === "1";
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   try {
@@ -30,7 +30,6 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       getLastUpdate(),
       getDailyCases()
     ]);
-    console.log(dailyCases.map(d => d.totalConfirmed));
     const html = getHtml({
       confirmed,
       recovered,
