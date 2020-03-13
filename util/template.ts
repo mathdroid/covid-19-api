@@ -119,7 +119,7 @@ export function getHtml(parsedReq: ParsedRequest) {
     <title>Generated Image</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        ${getCss(null, null)}
+        ${getCss(height)}
     </style>
     <script src="https://cdn.rawgit.com/fnando/sparkline/master/dist/sparkline.js"></script>
   </head>
