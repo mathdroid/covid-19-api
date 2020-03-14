@@ -27,8 +27,6 @@ export default async (req: NowRequest, response: NowResponse) => {
     );
   } catch (error) {
     response.statusCode = 404;
-    response.json({
-      error: { message: `Country \`${req.query.country}\` not found` }
-    });
+    response.json([]);
   }
 };
