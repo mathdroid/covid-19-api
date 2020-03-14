@@ -164,7 +164,7 @@ sparkline.sparkline(svgs[3], [${dailyCases
       <div class="wrapper">
         <div class="data-wrapper font-inter" style="font-weight: bold; font-size: 2rem; justify-content: flex-start; padding: 2rem 2rem; display: flex;flex-direction: column;align-items: flex-start;">
           <h1 style="margin: 0;font-size: 2rem;font-weight: normal; letter-spacing: 1px;">COVID-19 API</h1>
-          <h2 style-"margin: 0;">Global</h2>
+          <h2 style="margin: 0;">Global</h2>
         </div>
         <div class="data-wrapper" style="justify-content: space-between; flex: 1; padding: 0 2rem;">
           <div class="data">
