@@ -17,9 +17,10 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     const width = parseInt(req.query.width as string, 10) || 1200;
     const height = parseInt(req.query.height as string, 10) || 627;
     const isHtmlDebug =
-      isDev && (process.env.OG_HTML_DEBUG === "1" || req.query.debug === "true");
+      isDev &&
+      (process.env.OG_HTML_DEBUG === "1" || req.query.debug === "true");
     const [
-      confirmed,)
+      confirmed,
       recovered,
       deaths,
       lastUpdate,
