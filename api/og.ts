@@ -11,14 +11,15 @@ import {
 } from "../util/api";
 
 const isDev = process.env.NOW_REGION === "dev1";
-const isHtmlDebug = true || process.env.OG_HTML_DEBUG === "1";
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   try {
     const width = parseInt(req.query.width as string, 10) || 1200;
     const height = parseInt(req.query.height as string, 10) || 627;
+    const isHtmlDebug =
+      isDev && (process.env.OG_HTML_DEBUG === "1" || req.query.debug === "true");
     const [
-      confirmed,
+      confirmed,)
       recovered,
       deaths,
       lastUpdate,
