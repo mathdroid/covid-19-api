@@ -6,9 +6,9 @@ import {
   getTotalConfirmed,
   getTotalRecovered,
   getTotalDeaths,
-  getLastUpdate,
-  getDailyCases
+  getLastUpdate
 } from "../../../util/api";
+import { getCountryName } from "../../../util/countries";
 
 const isDev = process.env.NOW_REGION === "dev1";
 
