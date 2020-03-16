@@ -69,7 +69,20 @@ const isEmpty = obj => {
 
 export const fetchFeatures = async (url, query = {}) => {
   const endpoint = `${url}${isEmpty(query) ? "" : `?${qs.stringify(query)}`}`;
-  const response = await fetch(endpoint);
+  const headers = {
+    "user-agent":
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:75.0) Gecko/20100101 Firefox/75.0",
+    accept: "*/*",
+    "accept-language": "en-US,en;q=0.5",
+    origin: "https://gisanddata.maps.arcgis.com",
+    dnt: "1",
+    connection: "keep-alive",
+    referer: "https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html",
+    pragma: "no-cache",
+    "cache-control": "no-cache",
+    te: "Trailers"
+  };
+  const response = await fetch(endpoint, { headers });
   const { features } = await response.json();
   return features;
 };

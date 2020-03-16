@@ -34,6 +34,8 @@
 
 - /api/countries/[country]/deaths: a [country] cases per region sorted by death toll
 
+- /api/countries/[country]/og: generate a summary open graph image for a [country]
+
 ## Usage
 
 1. Clone
@@ -57,6 +59,9 @@
 - [https://github.com/pooladkhay/covid19](https://github.com/pooladkhay/covid19), (React, NextJS) by [Mohammad Javad Pooladkhay](https://mamadev.ir)
 
 - [https://github.com/alancampora/corona-virus-react](https://github.com/alancampora/corona-virus-react), (React) by [Alan Adrian Campora](https://github.com/alancampora)
+
+- [https://github.com/alankilalank/react-covid-19](https://github.com/alankilalank/react-covid-19), (React, CRA) by [Alank Ilalank](https://github.com/alankilalank)
+
 
 ## License
 
