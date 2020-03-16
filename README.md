@@ -34,6 +34,8 @@
 
 - /api/countries/[country]/deaths: a [country] cases per region sorted by death toll
 
+- /api/countries/[country]/og: generate a summary open graph image for a [country]
+
 ## Usage
 
 1. Clone
