@@ -58,7 +58,10 @@
 
 - [https://github.com/pooladkhay/covid19](https://github.com/pooladkhay/covid19), (React, NextJS) by [Mohammad Javad Pooladkhay](https://mamadev.ir)
 
+- [https://github.com/alancampora/corona-virus-react](https://github.com/alancampora/corona-virus-react), (React) by [Alan Adrian Campora](https://github.com/alancampora)
+
 - [https://github.com/alankilalank/react-covid-19](https://github.com/alankilalank/react-covid-19), (React, CRA) by [Alank Ilalank](https://github.com/alankilalank)
+
 
 ## License
 
