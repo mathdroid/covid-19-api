@@ -62,6 +62,8 @@
 
 - [https://github.com/alankilalank/react-covid-19](https://github.com/alankilalank/react-covid-19), (React, CRA) by [Alank Ilalank](https://github.com/alankilalank)
 
+- [https://github.com/pabloVinicius/covid-19-dashboard](https://github.com/pabloVinicius/covid-19-dashboard) [https://covid19.data.eti.br/](https://covid19.data.eti.br/), (Web) by [Pablo Vinicius](https://github.com/pabloVinicius)
+
 
 ## License
 
