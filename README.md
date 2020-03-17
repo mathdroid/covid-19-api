@@ -64,6 +64,7 @@
 
 - [https://github.com/pabloVinicius/covid-19-dashboard](https://github.com/pabloVinicius/covid-19-dashboard) [https://covid19.data.eti.br/](https://covid19.data.eti.br/), (Web) by [Pablo Vinicius](https://github.com/pabloVinicius)
 
+- [https://github.com/freakyfelt/gatsby-source-mathdroid-covid19](https://github.com/freakyfelt/gatsby-source-mathdroid-covid19)(https://github.com/freakyfelt/gatsby-source-mathdroid-covid19), (Gatsby, TypeScript) by [Bruce Felt](https://github.com/freakyfelt)
 
 ## License
 
