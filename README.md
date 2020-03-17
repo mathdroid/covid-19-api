@@ -69,6 +69,8 @@
 
 - [https://github.com/freakyfelt/gatsby-source-mathdroid-covid19](https://github.com/freakyfelt/gatsby-source-mathdroid-covid19)(https://github.com/freakyfelt/gatsby-source-mathdroid-covid19), (Gatsby, TypeScript) by [Bruce Felt](https://github.com/freakyfelt)
 
+- [https://covid-19-map.netlify.com/](https://covid-19-map.netlify.com/),(React, Deck.GL) by [Jason Feng](https://github.com/iyci)
+
 ## License
 
 MIT License 2020, mathdroid.
