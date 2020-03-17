@@ -69,6 +69,8 @@
 
 - [https://github.com/freakyfelt/gatsby-source-mathdroid-covid19](https://github.com/freakyfelt/gatsby-source-mathdroid-covid19)(https://github.com/freakyfelt/gatsby-source-mathdroid-covid19), (Gatsby, TypeScript) by [Bruce Felt](https://github.com/freakyfelt)
 
+- [https://github.com/kasramp/COVID-19-Telegram-bot](https://github.com/kasramp/COVID-19-Telegram-bot), (Telegram Bot, Java) by [Kasra Madadipouya](https://github.com/kasramp)
+
 ## License
 
 MIT License 2020, mathdroid.
