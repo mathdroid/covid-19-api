@@ -69,6 +69,8 @@
 
 - [https://github.com/freakyfelt/gatsby-source-mathdroid-covid19](https://github.com/freakyfelt/gatsby-source-mathdroid-covid19)(https://github.com/freakyfelt/gatsby-source-mathdroid-covid19), (Gatsby, TypeScript) by [Bruce Felt](https://github.com/freakyfelt)
 
+- [https://github.com/mazik/corona/](https://github.com/mazik/corona/), (An Electron based Desktop application based on VueJS) by [Md Mazedul Islam Khan](http://twitter.com/iamazik/)
+
 ## License
 
 MIT License 2020, mathdroid.
