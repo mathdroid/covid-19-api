@@ -117,7 +117,6 @@ export const countries = {
   Kazakhstan: "KZ",
   Kenya: "KE",
   Kiribati: "KI",
-  "Korea, South": "KR",
   Kosovo: "XK",
   Kuwait: "KW",
   Kyrgyzstan: "KG",
