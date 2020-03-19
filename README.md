@@ -69,6 +69,10 @@
 
 - [https://github.com/freakyfelt/gatsby-source-mathdroid-covid19](https://github.com/freakyfelt/gatsby-source-mathdroid-covid19)(https://github.com/freakyfelt/gatsby-source-mathdroid-covid19), (Gatsby, TypeScript) by [Bruce Felt](https://github.com/freakyfelt)
 
+- [https://github.com/freakyfelt/gatsby-source-mathdroid-covid19](https://github.com/freakyfelt/gatsby-source-mathdroid-covid19)(https://github.com/freakyfelt/gatsby-source-mathdroid-covid19), (Gatsby, TypeScript) by [Bruce Felt](https://github.com/freakyfelt)
+
+- [https://github.com/miftahafina/covid19-data](https://github.com/miftahafina/covid19-data), (React) by [Miftah Afina](https://github.com/miftahafina)
+
 ## License
 
 MIT License 2020, mathdroid.
