@@ -83,6 +83,8 @@
 
 - [https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker] (https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker), (PHP) by [Ghazif Adeem](https://github.com/Ghazif-Adeem)
 
+- [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
+
 
 ## License
 
