@@ -83,6 +83,9 @@
 
 - [https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker] (https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker), (PHP) by [Ghazif Adeem](https://github.com/Ghazif-Adeem)
 
+- [Access mathdroid API to store Coronavirus COVID-19 worldwide data in JSON format](https://github.com/maxMaxineChen/COVID-19-worldwide-json-data-script), (Javascript script, get updated every 8 hours by Github Actions) by [Maxine Chen](https://github.com/maxMaxineChen)
+
+- [A Coronavirus COVID-19 global data statistics website](https://github.com/maxMaxineChen/COVID19-Worldwide-Stats), (React + Gatsby + Material UI + Recharts) by [Maxine Chen](https://github.com/maxMaxineChen)
 
 ## License
 
