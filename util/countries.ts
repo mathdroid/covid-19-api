@@ -506,6 +506,21 @@ export const iso3 = {
   ZW: "ZWE"
 };
 
+const aliases = {
+  "taiwan": "TW",
+  "north korea": "KP",
+  "gambia": "GM",
+  "south korea": "KR"
+};
+
+const getIso2ByAlias = (countryName: string) => {
+  const possibleAlias = countryName.toLowerCase();
+  const iso2 = aliases[possibleAlias];
+  if (iso2) return iso2.toUpperCase();
+
+  return countryName;
+};
+
 const getIso2FromIso3 = (iso3String: string) => {
   const [iso2] = Object.entries(iso3).find(
     ([_, value]) => value === iso3String
@@ -523,7 +538,7 @@ const getCountryNameFromIso2 = (iso2String: string) => {
 export const getCountryName = (countryName?: string) => {
   if (!countryName) return undefined;
   if (countryName in countries) return countryName;
-  const countryCode = countryName.toUpperCase();
+  const countryCode = getIso2ByAlias(countryName).toUpperCase();
   return (
     getCountryNameFromIso2(
       countryCode in iso3 ? countryCode : getIso2FromIso3(countryCode)

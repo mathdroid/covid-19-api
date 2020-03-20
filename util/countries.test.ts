@@ -18,4 +18,10 @@ describe('getCountryName', () => {
   test('converts ISO3 to jhu country name', () => {
     expect(getCountryName('DEU')).toBe('Germany');
   })
+
+  test('converts aliases to jhu country names', () => {
+    expect(getCountryName('taiwan')).toBe('Taiwan*');
+    expect(getCountryName('north Korea')).toBe("People's Republic of Korea");
+    expect(getCountryName('Gambia')).toBe('Gambia, The');
+  })
 })
