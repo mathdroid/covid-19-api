@@ -83,6 +83,7 @@
 
 - [https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker] (https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker), (PHP) by [Ghazif Adeem](https://github.com/Ghazif-Adeem)
 
+- [Corona-tracker](https://corona-tracker-2020.netlify.com/), (Vue frontend for the API with main focus on India) by [Akash Raju M](https://github.com/akashrajum7) 
 
 ## License
 
