@@ -59,6 +59,8 @@
 
 - [https://github.com/pararang/vue-covid](https://github.com/pararang/vue-covid), (VueJS) by [Muhammad Ikhsan](https://github.com/pararang)
 
+- [Vue Covid 19 monitoring App](https://github.com/princerafid01/covid19), (VueJS) by [Mahmud Rafid](https://github.com/princerafid01) . A [demo](https://covid-19-stat.now.sh).
+
 - [https://github.com/pooladkhay/covid19](https://github.com/pooladkhay/covid19), (React, NextJS) by [Mohammad Javad Pooladkhay](https://mamadev.ir)
 
 - [https://github.com/alancampora/corona-virus-react](https://github.com/alancampora/corona-virus-react), (React) by [Alan Adrian Campora](https://github.com/alancampora)
