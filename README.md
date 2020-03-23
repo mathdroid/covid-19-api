@@ -69,13 +69,11 @@
 
 - [https://github.com/freakyfelt/gatsby-source-mathdroid-covid19](https://github.com/freakyfelt/gatsby-source-mathdroid-covid19)(https://github.com/freakyfelt/gatsby-source-mathdroid-covid19), (Gatsby, TypeScript) by [Bruce Felt](https://github.com/freakyfelt)
 
-- [https://github.com/freakyfelt/gatsby-source-mathdroid-covid19](https://github.com/freakyfelt/gatsby-source-mathdroid-covid19)(https://github.com/freakyfelt/gatsby-source-mathdroid-covid19), (Gatsby, TypeScript) by [Bruce Felt](https://github.com/freakyfelt)
-
 - [https://github.com/miftahafina/covid19-data](https://github.com/miftahafina/covid19-data), (React) by [Miftah Afina](https://github.com/miftahafina)
 
 - [https://github.com/mazik/corona/](https://github.com/mazik/corona/), (An Electron based Desktop application based on VueJS) by [Md Mazedul Islam Khan](http://twitter.com/iamazik/)
 
-- [https://github.com/hoaaah/flutter-covid19ina](https://github.com/hoaaah/flutter-covid19ina)(Flutter) by [@hoaaah](https://github.com/hoaaah)
+- [https://github.com/hoaaah/flutter-covid19ina](https://github.com/hoaaah/flutter-covid19ina), (Flutter) by [@hoaaah](https://github.com/hoaaah)
 
 - [https://github.com/kasramp/COVID-19-Telegram-bot](https://github.com/kasramp/COVID-19-Telegram-bot), (Telegram Bot, Java) by [Kasra Madadipouya](https://github.com/kasramp)
 
@@ -83,7 +81,9 @@
 
 - [https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker] (https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker), (PHP) by [Ghazif Adeem](https://github.com/Ghazif-Adeem)
 
-- [https://novel-coronavirus-reports.netlify.com/](https://novel-coronavirus-reports.netlify.com/) (PWA with Map & reports) by [Sharad Raj Singh Maurya](https://github.com/sharadcodes)
+- [https://novel-coronavirus-reports.netlify.com/](https://novel-coronavirus-reports.netlify.com/), (PWA with Map & reports) by [Sharad Raj Singh Maurya](https://github.com/sharadcodes)
+
+- [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
 ## License
 
