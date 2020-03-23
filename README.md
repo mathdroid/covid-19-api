@@ -79,11 +79,16 @@
 
 - [https://covid-19-map.netlify.com/](https://covid-19-map.netlify.com/),(React, Deck.GL) by [Jason Feng](https://github.com/iyci)
 
-- [https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker] (https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker), (PHP) by [Ghazif Adeem](https://github.com/Ghazif-Adeem)
+- [https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker](https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker), (PHP) by [Ghazif Adeem](https://github.com/Ghazif-Adeem)
+
+- [Access mathdroid API to store Coronavirus COVID-19 worldwide data in JSON format](https://github.com/maxMaxineChen/COVID-19-worldwide-json-data-script), (Javascript script, get updated every 8 hours by Github Actions) by [Maxine Chen](https://github.com/maxMaxineChen)
+
+- [A Coronavirus COVID-19 global data statistics website](https://github.com/maxMaxineChen/COVID19-Worldwide-Stats), (React + Gatsby + Material UI + Recharts) by [Maxine Chen](https://github.com/maxMaxineChen)
 
 - [https://novel-coronavirus-reports.netlify.com/](https://novel-coronavirus-reports.netlify.com/), (PWA with Map & reports) by [Sharad Raj Singh Maurya](https://github.com/sharadcodes)
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
+
 
 ## License
 
