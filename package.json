@@ -13,7 +13,7 @@
     "isomorphic-unfetch": "^3.0.0",
     "pbf": "^3.2.1",
     "puppeteer-core": "^2.1.1",
-    "qs": "^6.9.1"
+    "qs": "^6.9.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
