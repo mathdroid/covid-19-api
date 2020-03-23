@@ -14,6 +14,7 @@ import {
   queryCasesTimeSeries
 } from "./query";
 import { getCountryName } from "./countries";
+import { getIsoDateFromUnixTime } from "./date";
 
 export const getTotalConfirmed = async (countryName?: string) => {
   return extractSingleValue(
@@ -57,3 +58,31 @@ export const getDailyCases = async () =>
   (await fetchFeatures(endpoints.casesTime, queryCasesTimeSeries()))
     .map(attributeSpreader)
     .map(normalizeKeys);
+
+export const getConfirmedGraph = async (resultOffset = 0) => {
+  const apiResult = (
+    await fetchFeatures(
+      `https://services9.arcgis.com/N9p5hsImWXAccRNI/arcgis/rest/services/Nc2JKvYFoAEOFCG5JSI6/FeatureServer/4/query`,
+      {
+        f: `json`,
+        where: `1=1`,
+        returnGeometry: false,
+        spatialRel: `esriSpatialRelIntersects`,
+        outFields: `*`,
+        orderByFields: `Last_Update asc`,
+        resultOffset,
+        resultRecordCount: 1000,
+        cacheHint: true
+      }
+    )
+  )
+    .map(attributeSpreader)
+    .map(normalizeKeys)
+    .map(data => ({
+      ...data,
+      date: getIsoDateFromUnixTime(data.lastUpdate)
+    }));
+  return apiResult.length !== 0
+    ? [...apiResult, ...(await getConfirmedGraph(resultOffset + 1000))]
+    : apiResult;
+};
