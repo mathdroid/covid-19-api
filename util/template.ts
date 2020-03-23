@@ -135,12 +135,12 @@ export function getHtml(parsedReq: ParsedRequest) {
     dailyCases.length > 0
       ? `  <!-- width, height and stroke-width attributes must be defined on the target SVG -->
     <svg class="sparkline black" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5;"></svg>
-    <svg class="sparkline green" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; top: ${height -
-          Math.floor((recovered / confirmed) * height)}px;"></svg>
-    <svg class="sparkline red" width="${width}" height="${height}" stroke-width="2" style="position: absolute; z-index:-1; opacity:0.5; top: ${height -
+    <svg class="sparkline green" width="${width}" height="${height}" stroke-width="2" style="position: absolute; z-index:-1; opacity:0.5; top: ${height -
           Math.floor(
-            (deaths / confirmed) * height
+            (recovered / confirmed) * height
           )}px;" stroke-dasharray="5,5"></svg>
+    <svg class="sparkline red" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; top: ${height -
+          Math.floor((deaths / confirmed) * height)}px;" ></svg>
     <svg class="sparkline orange" width="${width}" height="${height}" stroke-width="4" style="position: absolute; z-index:-1; opacity:0.5; top: ${height -
           Math.floor(
             (dailyCases.slice(-1)[0].otherLocations / confirmed) * height
@@ -152,20 +152,18 @@ export function getHtml(parsedReq: ParsedRequest) {
     sparkline.sparkline(svgs[0], [${dailyCases
       .map(d => d.totalConfirmed)
       .join(", ")}, ${confirmed}]);
-    svgs[1].setAttribute("height", Math.floor(${
-      dailyCases.slice(-1)[0].totalRecovered
-    }/${confirmed} * ${height}))
-    sparkline.sparkline(svgs[1], [${dailyCases
-      .map(d => d.totalRecovered || 0)
-      .join(", ")}, ${recovered}]);
+    svgs[1].setAttribute("height", Math.floor(${recovered}/${confirmed} * ${height}))
+    sparkline.sparkline(svgs[1], [100,100,100]);
     svgs[2].setAttribute("height", Math.floor(${deaths}/${confirmed} * ${height}))
-    sparkline.sparkline(svgs[2], [100,100,100]);
+    sparkline.sparkline(svgs[2], [${dailyCases
+      .map(d => d.deaths.total || 0)
+      .join(", ")}]);
     svgs[3].setAttribute("height", Math.floor(${
       dailyCases.slice(-1)[0].otherLocations
     }/${confirmed} *  ${height}))
     sparkline.sparkline(svgs[3], [${dailyCases
       .map(d => d.otherLocations || 0)
-      .join(", ")}, ${confirmed - (recovered + deaths)}]);
+      .join(", ")}]);
     </script>`
       : ""
   }
