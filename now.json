@@ -6,7 +6,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, s-maxage=1, stale-while-revalidate"
+          "value": "public, s-maxage=60, stale-while-revalidate"
         },
         {
           "key": "Access-Control-Allow-Origin",
