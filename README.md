@@ -83,6 +83,7 @@
 
 - [https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker] (https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker), (PHP) by [Ghazif Adeem](https://github.com/Ghazif-Adeem)
 
+- [https://novel-coronavirus-reports.netlify.com/](https://novel-coronavirus-reports.netlify.com/) (PWA with Map & reports) by [Sharad Raj Singh Maurya](https://github.com/sharadcodes)
 
 ## License
 
