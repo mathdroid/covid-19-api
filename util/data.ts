@@ -84,7 +84,7 @@ export const fetchFeatures = async (url, query = {}) => {
   };
   const response = await fetch(endpoint, { headers });
   const data = await response.json();
-  // console.log(data);
+  console.log(data);
   return data.features;
 };
 
