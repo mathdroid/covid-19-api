@@ -89,6 +89,8 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
+- [https://corona-stats-eta.now.sh/](https://corona-stats-eta.now.sh/), (React, Hooks) by [Vitor Boccio](https://github.com/vitorboccio)
+
 
 ## License
 
