@@ -22,8 +22,8 @@ export default async (req: NowRequest, response: NowResponse) => {
       )
         .map(attributeSpreader)
         .map(normalizeKeys)
-      // .map(matchCountryCode)
-      // .map(getIso3Code)
+        .map(matchCountryCode)
+        .map(getIso3Code)
     );
   } catch (error) {
     response.statusCode = 404;

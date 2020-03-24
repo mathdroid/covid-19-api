@@ -506,10 +506,10 @@ export const iso3 = {
   ZW: "ZWE"
 };
 
-const aliases = {
-  "taiwan": "TW",
+export const aliases = {
+  taiwan: "TW",
   "north korea": "KP",
-  "gambia": "GM",
+  gambia: "GM",
   "south korea": "KR"
 };
 
