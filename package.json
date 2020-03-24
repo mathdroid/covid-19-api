@@ -13,13 +13,13 @@
     "isomorphic-unfetch": "^3.0.0",
     "pbf": "^3.2.1",
     "puppeteer-core": "^2.1.1",
-    "qs": "^6.9.1"
+    "qs": "^6.9.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/preset-typescript": "^7.8.3",
-    "@now/node": "^1.4.1",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@now/node": "^1.5.0",
     "@types/jest": "^25.1.4",
     "@types/qs": "^6.9.1",
     "babel-jest": "^25.1.0",
