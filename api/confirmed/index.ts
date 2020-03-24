@@ -6,8 +6,8 @@ import {
   matchCountryCode,
   getIso3Code
 } from "../../util/data";
-import { endpoints } from "../../util/endpoints";
 import { queryConfirmed } from "../../util/query";
+import { getEndpoint } from "../../util/endpoints";
 
 const sumObject = (base, newValue) => {
   for (const key in newValue) {
@@ -50,10 +50,19 @@ const groupByCountryRegion = data => {
 export default async (request: NowRequest, response: NowResponse) => {
   const shouldGroupByCountryRegion = request.query["byCountry"] === "true";
 
-  const data = (await fetchFeatures(endpoints.cases, queryConfirmed()))
+  const data = (
+    await fetchFeatures(
+      getEndpoint(
+        shouldGroupByCountryRegion
+          ? "countryRegion"
+          : (request.query.level as string)
+      ),
+      queryConfirmed()
+    )
+  )
     .map(attributeSpreader)
     .map(normalizeKeys)
     .map(matchCountryCode)
     .map(getIso3Code);
-  response.json(shouldGroupByCountryRegion ? groupByCountryRegion(data) : data);
+  response.json(data);
 };

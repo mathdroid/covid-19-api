@@ -7,7 +7,7 @@ import {
   getTotalRecovered,
   getTotalDeaths,
   getLastUpdate,
-  getDaily
+  getDailyCases
 } from "../util/api";
 
 const isDev = process.env.NOW_REGION === "dev1";
@@ -30,7 +30,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       getTotalRecovered(),
       getTotalDeaths(),
       getLastUpdate(),
-      getDaily()
+      getDailyCases()
     ]);
     const html = getHtml({
       confirmed,

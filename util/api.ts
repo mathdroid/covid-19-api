@@ -19,7 +19,7 @@ import { getIsoDateFromUnixTime } from "./date";
 export const getTotalConfirmed = async (countryName?: string) => {
   return extractSingleValue(
     await fetchFeatures(
-      endpoints.cases,
+      endpoints.casesCounty,
       queryTotalConfirmed(getCountryName(countryName))
     )
   );
@@ -28,7 +28,7 @@ export const getTotalConfirmed = async (countryName?: string) => {
 export const getTotalRecovered = async (countryName?: string) => {
   return extractSingleValue(
     await fetchFeatures(
-      endpoints.cases,
+      endpoints.casesCounty,
       queryTotalRecovered(getCountryName(countryName))
     )
   );
@@ -37,7 +37,7 @@ export const getTotalRecovered = async (countryName?: string) => {
 export const getTotalDeaths = async (countryName?: string) => {
   return extractSingleValue(
     await fetchFeatures(
-      endpoints.cases,
+      endpoints.casesCounty,
       queryTotalDeaths(getCountryName(countryName))
     )
   );
@@ -45,7 +45,7 @@ export const getTotalDeaths = async (countryName?: string) => {
 
 export const getLastUpdate = async (countryName?: string) => {
   const f = await fetchFeatures(
-    endpoints.cases,
+    endpoints.casesCounty,
     queryLastUpdate(getCountryName(countryName))
   );
   const feature = f
@@ -53,11 +53,6 @@ export const getLastUpdate = async (countryName?: string) => {
     : { lastUpdate: new Date() };
   return new Date(feature.lastUpdate).toISOString();
 };
-
-export const getDailyCases = async () =>
-  (await fetchFeatures(endpoints.casesTime, queryCasesTimeSeries()))
-    .map(attributeSpreader)
-    .map(normalizeKeys);
 
 export const getConfirmedGraph = async (resultOffset = 0) => {
   const apiResult = (
@@ -87,7 +82,7 @@ export const getConfirmedGraph = async (resultOffset = 0) => {
     : apiResult;
 };
 
-export const getDaily = async () => {
+export const getDailyCases = async () => {
   const result = Object.entries(
     (await getConfirmedGraph()).reduce((acc, cur) => {
       const totalConfirmed =

@@ -7,16 +7,16 @@ import {
   matchCountryCode,
   getIso3Code
 } from "../../../util/data";
-import { endpoints } from "../../../util/endpoints";
 import { queryDeaths } from "../../../util/query";
 import { getCountryName } from "../../../util/countries";
+import { getEndpoint } from "../../../util/endpoints";
 
 export default async (req: NowRequest, response: NowResponse) => {
   try {
     response.json(
       (
         await fetchFeatures(
-          endpoints.cases,
+          getEndpoint(req.query.level as string),
           queryDeaths(getCountryName(req.query.country as string))
         )
       )

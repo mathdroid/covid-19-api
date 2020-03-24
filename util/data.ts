@@ -83,6 +83,11 @@ export const fetchFeatures = async (url, query = {}) => {
     te: "Trailers"
   };
   const response = await fetch(endpoint, { headers });
-  const { features } = await response.json();
-  return features;
+  const data = await response.json();
+  // console.log(data);
+  return data.features;
 };
+
+// export const groupBy = (array: any[], field: string) => {
+
+// }

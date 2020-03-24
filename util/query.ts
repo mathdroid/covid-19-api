@@ -20,22 +20,37 @@ export const createArrayQuery = ({ where, orderByFields }) => ({
   orderByFields
 });
 
-export const queryConfirmed = (countryRegion?: string) =>
+export const queryConfirmed = (
+  countryRegion?: string,
+  shouldUseProvinceState?: boolean
+) =>
   createArrayQuery({
     where: withCountryRegion(where.confirmed, countryRegion),
-    orderByFields: "Confirmed desc, Country_Region asc, Province_State asc"
+    orderByFields: `Confirmed desc, Country_Region asc${
+      shouldUseProvinceState ? ",Province_State asc" : ""
+    }`
   });
 
-export const queryDeaths = (countryRegion?: string) =>
+export const queryDeaths = (
+  countryRegion?: string,
+  shouldUseProvinceState?: boolean
+) =>
   createArrayQuery({
     where: withCountryRegion(where.deaths, countryRegion),
-    orderByFields: "Deaths desc, Country_Region asc, Province_State asc"
+    orderByFields: `Deaths desc, Country_Region asc${
+      shouldUseProvinceState ? ",Province_State asc" : ""
+    }`
   });
 
-export const queryRecovered = (countryRegion?: string) =>
+export const queryRecovered = (
+  countryRegion?: string,
+  shouldUseProvinceState?: boolean
+) =>
   createArrayQuery({
     where: withCountryRegion(where.recovered, countryRegion),
-    orderByFields: "Recovered desc, Country_Region asc, Province_State asc"
+    orderByFields: `Recovered desc, Country_Region asc${
+      shouldUseProvinceState ? ",Province_State asc" : ""
+    }`
   });
 
 export const queryLastUpdate = (countryRegion?: string) => ({
