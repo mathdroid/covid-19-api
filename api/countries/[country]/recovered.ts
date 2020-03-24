@@ -13,10 +13,13 @@ import { getCountryName } from "../../../util/countries";
 
 export default async (req: NowRequest, response: NowResponse) => {
   try {
+    const country = getCountryName(req.query.country as string);
     response.json(
       (
         await fetchFeatures(
-          getEndpoint(req.query.level as string),
+          getEndpoint(
+            country === "US" ? (req.query.level as string) : "county"
+          ),
           queryRecovered(getCountryName(req.query.country as string))
         )
       )
