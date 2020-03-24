@@ -13,9 +13,10 @@ export const getEndpoint = (level: string) => {
   switch (level) {
     case "countryRegion":
       return endpoints.casesCountryRegion;
-    case "county":
-      return endpoints.casesCounty;
-    default:
+    case "provinceState":
       return endpoints.casesProvinceState;
+    case "county":
+    default:
+      return endpoints.casesCounty;
   }
 };
