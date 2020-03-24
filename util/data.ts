@@ -86,11 +86,11 @@ export const fetchFeatures = async (url, query = {}) => {
   };
   const response = await fetch(endpoint, { headers });
   const data = await response.json();
-  console.log({
-    endpoint,
-    query,
-    features: data.features
-  });
+  // console.log({
+  //   endpoint,
+  //   query,
+  //   features: data.features
+  // });
   return Array.isArray(data.features) &&
     data.features &&
     data.features.length === 1000
