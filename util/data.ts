@@ -67,8 +67,9 @@ const isEmpty = obj => {
   return true;
 };
 
-export const fetchFeatures = async (url, query = {}) => {
-  const endpoint = `${url}${isEmpty(query) ? "" : `?${qs.stringify(query)}`}`;
+export const fetchFeatures = async (url, query = {}, resultOffset = 0) => {
+  const endpoint = `${url}?${qs.stringify({ resultOffset, ...query })}`;
+  console.log({ endpoint });
   const headers = {
     "user-agent":
       "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:75.0) Gecko/20100101 Firefox/75.0",
@@ -84,8 +85,13 @@ export const fetchFeatures = async (url, query = {}) => {
   };
   const response = await fetch(endpoint, { headers });
   const data = await response.json();
-  console.log(data);
-  return data.features;
+  console.log(data.features.length);
+  return Array.isArray(data.features) && data.features.length !== 0
+    ? [
+        ...data.features,
+        ...(await fetchFeatures(url, query, resultOffset + 1000))
+      ]
+    : [];
 };
 
 // export const groupBy = (array: any[], field: string) => {

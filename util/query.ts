@@ -25,7 +25,9 @@ export const queryConfirmed = (
   shouldUseProvinceState?: boolean
 ) =>
   createArrayQuery({
-    where: withCountryRegion(where.confirmed, countryRegion),
+    where: countryRegion
+      ? withCountryRegion(where.confirmed, countryRegion)
+      : where.all,
     orderByFields: `Confirmed desc, Country_Region asc${
       shouldUseProvinceState ? ",Province_State asc" : ""
     }`
@@ -36,7 +38,9 @@ export const queryDeaths = (
   shouldUseProvinceState?: boolean
 ) =>
   createArrayQuery({
-    where: withCountryRegion(where.deaths, countryRegion),
+    where: countryRegion
+      ? withCountryRegion(where.deaths, countryRegion)
+      : where.all,
     orderByFields: `Deaths desc, Country_Region asc${
       shouldUseProvinceState ? ",Province_State asc" : ""
     }`
@@ -47,7 +51,9 @@ export const queryRecovered = (
   shouldUseProvinceState?: boolean
 ) =>
   createArrayQuery({
-    where: withCountryRegion(where.recovered, countryRegion),
+    where: countryRegion
+      ? withCountryRegion(where.recovered, countryRegion)
+      : where.all,
     orderByFields: `Recovered desc, Country_Region asc${
       shouldUseProvinceState ? ",Province_State asc" : ""
     }`

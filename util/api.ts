@@ -77,9 +77,7 @@ export const getConfirmedGraph = async (resultOffset = 0) => {
       ...data,
       date: getIsoDateFromUnixTime(data.lastUpdate)
     }));
-  return apiResult.length !== 0
-    ? [...apiResult, ...(await getConfirmedGraph(resultOffset + 1000))]
-    : apiResult;
+  return apiResult;
 };
 
 export const getDailyCases = async () => {
