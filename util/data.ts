@@ -93,7 +93,7 @@ export const fetchFeatures = async (url, query = {}, resultOffset = 0) => {
         ...data.features,
         ...(await fetchFeatures(url, query, resultOffset + 1000))
       ]
-    : [];
+    : data.features;
 };
 
 // export const groupBy = (array: any[], field: string) => {
