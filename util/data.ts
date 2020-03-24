@@ -67,9 +67,8 @@ const isEmpty = obj => {
   return true;
 };
 
-export const fetchFeatures = async (url, query = {}, resultOffset = 0) => {
-  const endpoint = `${url}?${qs.stringify({ resultOffset, ...query })}`;
-  console.log({ endpoint });
+const fetchFeaturesWithoutOffset = async (url, query = {}) => {
+  const endpoint = `${url}?${qs.stringify({ ...query })}`;
   const headers = {
     "user-agent":
       "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:75.0) Gecko/20100101 Firefox/75.0",
@@ -85,15 +84,50 @@ export const fetchFeatures = async (url, query = {}, resultOffset = 0) => {
   };
   const response = await fetch(endpoint, { headers });
   const data = await response.json();
-  // console.log(data.features.length);
-  return Array.isArray(data.features) &&
-    data.features &&
-    data.features.length !== 0
-    ? [
-        ...data.features,
-        ...(await fetchFeatures(url, query, resultOffset + 1000))
-      ]
-    : data.features;
+  console.log(data.features);
+  return data.features;
+};
+
+export const fetchFeatures = async (url, query = {}, resultOffset = 0) => {
+  try {
+    const endpoint = `${url}?${qs.stringify({ resultOffset, ...query })}`;
+    const headers = {
+      "user-agent":
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:75.0) Gecko/20100101 Firefox/75.0",
+      accept: "*/*",
+      "accept-language": "en-US,en;q=0.5",
+      origin: "https://gisanddata.maps.arcgis.com",
+      dnt: "1",
+      connection: "keep-alive",
+      referer:
+        "https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html",
+      pragma: "no-cache",
+      "cache-control": "no-cache",
+      te: "Trailers"
+    };
+    const response = await fetch(endpoint, { headers });
+    const data = await response.json();
+    // console.log({
+    //   endpoint,
+    //   query: {
+    //     resultOffset,
+    //     ...query
+    //   },
+    //   features: data.features
+    // });
+    if (typeof data.features === "undefined")
+      return fetchFeaturesWithoutOffset(url, query);
+    return Array.isArray(data.features) &&
+      data.features &&
+      data.features.length === 1000
+      ? [
+          ...data.features,
+          ...(await fetchFeatures(url, query, resultOffset + 1000))
+        ]
+      : data.features;
+  } catch (error) {
+    return fetchFeaturesWithoutOffset(url, query);
+  }
 };
 
 // export const groupBy = (array: any[], field: string) => {
