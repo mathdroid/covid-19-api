@@ -105,8 +105,8 @@ export const getDailyCases = async () => {
       const deltaConfirmed =
         cur.deltaConfirmed +
         ((acc[cur.date] &&
-          acc[cur.date].deltaConfirmed &&
-          acc[cur.date].deltaConfirmed.total) ||
+          acc[cur.date].deltaConfirmedDetail &&
+          acc[cur.date].deltaConfirmedDetail.total) ||
           0);
 
       const totalRecovered =
@@ -119,6 +119,7 @@ export const getDailyCases = async () => {
       return {
         ...acc,
         [cur.date]: {
+          // cur: [...((acc[cur.date] && acc[cur.date].cur) || []), cur],
           totalConfirmed,
           mainlandChina,
           otherLocations,
