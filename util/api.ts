@@ -135,14 +135,14 @@ export const getDailyCases = async () => {
             china:
               (cur.countryRegion === "China" ? cur.deltaConfirmed : 0) +
               ((acc[cur.date] &&
-                acc[cur.date].deltaConfirmed &&
-                acc[cur.date].deltaConfirmed.china) ||
+                acc[cur.date].deltaConfirmedDetail &&
+                acc[cur.date].deltaConfirmedDetail.china) ||
                 0),
             outsideChina:
               (cur.countryRegion !== "China" ? cur.deltaConfirmed : 0) +
               ((acc[cur.date] &&
-                acc[cur.date].deltaConfirmed &&
-                acc[cur.date].deltaConfirmed.outsideChina) ||
+                acc[cur.date].deltaConfirmedDetail &&
+                acc[cur.date].deltaConfirmedDetail.outsideChina) ||
                 0)
           },
           deaths: {
