@@ -89,7 +89,7 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
-- [COVID-19 | Coronavirus Stats](https://covidstats.ca/), (React) by [Micah Mones](https://github.com/micahmones)
+- [COVID-19 | Coronavirus Live Stats and Tracker](https://covidstats.ca/), (React) by [Micah Mones](https://github.com/micahmones)
 
 
 ## License
