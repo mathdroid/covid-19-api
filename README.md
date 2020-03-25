@@ -89,7 +89,7 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
-
+- [https://github.com/NoumanHere/COVID-19-Using-Django](https://github.com/NoumanHere/COVID-19-Using-Django), (Django, Python) by [Nouman](https://github.com/NoumanHere/)
 ## License
 
 MIT License 2020, mathdroid.
