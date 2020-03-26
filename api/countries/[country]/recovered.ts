@@ -4,8 +4,7 @@ import {
   fetchFeatures,
   attributeSpreader,
   normalizeKeys,
-  matchCountryCode,
-  getIso3Code
+  inferActive
 } from "../../../util/data";
 import { getEndpoint } from "../../../util/endpoints";
 import { queryRecovered } from "../../../util/query";
@@ -25,8 +24,7 @@ export default async (req: NowRequest, response: NowResponse) => {
       )
         .map(attributeSpreader)
         .map(normalizeKeys)
-        .map(matchCountryCode)
-        .map(getIso3Code)
+        .map(inferActive)
     );
   } catch (error) {
     response.statusCode = 404;
