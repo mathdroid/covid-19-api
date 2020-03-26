@@ -69,6 +69,7 @@ const isEmpty = obj => {
 
 export const fetchFeatures = async (url, query = {}) => {
   const endpoint = `${url}?${qs.stringify(query)}`;
+  // console.log({ url, query });
   const headers = {
     authority: "services9.arcgis.com",
     pragma: "no-cache",

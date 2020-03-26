@@ -11,21 +11,30 @@ import {
   queryTotalConfirmed,
   queryTotalRecovered,
   queryLastUpdate,
-  queryCasesTimeSeries
+  queryCasesTimeSeries,
+  queryConfirmed
 } from "./query";
-import { getCountryName } from "./countries";
+import { getCountryName, countries } from "./countries";
 import { getIsoDateFromUnixTime } from "./date";
 
+const getRecoveredUS = async () => {
+  return (await fetchFeatures(endpoints.casesCounty, queryConfirmed()))
+    .filter(d => d.attributes["Country_Region"] === "US")
+    .map(d => d.attributes.Recovered);
+};
+
 export const getTotalConfirmed = async (countryName?: string) => {
+  const name = getCountryName(countryName);
   return extractSingleValue(
-    await fetchFeatures(
-      endpoints.casesCounty,
-      queryTotalConfirmed(getCountryName(countryName))
-    )
+    await fetchFeatures(endpoints.casesCounty, queryTotalConfirmed(name))
   );
 };
 
 export const getTotalRecovered = async (countryName?: string) => {
+  const name = getCountryName(countryName);
+  // if (name === "US") {
+  //   return getRecoveredUS();
+  // }
   return extractSingleValue(
     await fetchFeatures(
       endpoints.casesCounty,
