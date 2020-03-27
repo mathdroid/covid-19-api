@@ -89,6 +89,8 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
+- [https://github.com/johanneshaberlah/corona-dashboard](https://github.com/johanneshaberlah/corona-dashboard), (Java, Spring) by [Johannes Haberlah](https://github.com/johanneshaberlah)
+
 
 ## License
 
