@@ -83,7 +83,7 @@
 
 - [https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker] (https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker), (PHP) by [Ghazif Adeem](https://github.com/Ghazif-Adeem)
 
-- [https://github.com/juanitourquiza/ng-covid-19] (https://github.com/juanitourquiza/ng-covid-19) [https://juanitourquiza.github.io/covid19/] (https://juanitourquiza.github.io/covid19/), (Angular) by [Juan Urquiza](https://github.com/juanitourquiza)
+- [https://github.com/juanitourquiza/ng-covid-19] (https://github.com/juanitourquiza/ng-covid-19) [https://hackeruna.com/covid19/] (https://hackeruna.com/covid19/), (Angular) by [Juan Urquiza](https://github.com/juanitourquiza)
 
 
 ## License
