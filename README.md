@@ -89,6 +89,8 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
+- <https://mzaini30.js.org/covid19>. Source: <https://github.com/mzaini30/covid19/>. By: [@mzaini30](https://github.com/mzaini30)
+
 
 ## License
 
