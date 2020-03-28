@@ -89,6 +89,7 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
+- [https://github.com/NicolaLisci/COV1D9](https://github.com/NicolaLisci/COV1D9), (Angular 9, Typescript) by [Nicola Lisci](https://github.com/NicolaLisci) [DEMO](https://cov1d9.web.app/)
 
 ## License
 
