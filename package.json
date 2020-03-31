@@ -24,6 +24,7 @@
     "@types/qs": "^6.9.1",
     "babel-jest": "^25.2.0",
     "jest": "^25.2.0",
-    "objects-to-csv": "^1.3.6"
+    "objects-to-csv": "^1.3.6",
+    "typescript": "^3.8.3"
   }
 }
