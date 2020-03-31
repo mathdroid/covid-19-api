@@ -89,6 +89,8 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
+- [https://github.com/dabigjoe6/react-native-covid19](https://github.com/dabigjoe6/react-native-covid19), (React Native) by [Joseph Olabisi](https://github.com/dabigjoe6)
+
 
 ## License
 
