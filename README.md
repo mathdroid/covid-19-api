@@ -89,6 +89,8 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
+- [https://github.com/oniharnantyo/covid-19-telegram-bot](https://github.com/oniharnantyo/covid-19-telegram-bot), (Telegram Bot, Golang) by [Oni Harnantyo](https://github.com/oniharnantyo/covid-19-telegram-bot)
+
 
 ## License
 
