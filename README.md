@@ -8,7 +8,6 @@
 
 [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/mathdroid/covid-19-api)
 
-
 ## Routes
 
 - /: contains opengraph image for sharing
@@ -89,6 +88,7 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
+- [https://fight-covid19.netlify.app/](https://fight-covid19.netlify.app/), (Gatsby, React) by [Jason Zheng](https://github.com/bilafish)
 
 ## License
 
