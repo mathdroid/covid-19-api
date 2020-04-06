@@ -89,7 +89,7 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
-- [https://github.com/mastersam07/toju_wa](https://github.com/mastersam07/toju_wa)(Flutter) by [@Mastersam07](https://github.com/mastersam07)
+- [https://github.com/mastersam07/toju_wa](https://github.com/mastersam07/toju_wa), (Flutter) by [@Mastersam07](https://github.com/mastersam07)
 
 
 ## License
