@@ -88,7 +88,7 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
-- [https://github.com/chiragsrvstv/covid19-live-stats](https://github.com/chiragsrvstv/covid19-live-stats), (ReactJS + PWA) by [Chirag Srivastava](https://chiragsrvstv.codes)
+- [Live and updated statistics on the COVID-19 outbreak](https://github.com/chiragsrvstv/covid19-live-stats), (ReactJS + PWA) by [Chirag Srivastava](https://chiragsrvstv.codes)
 
 ## License
 
