@@ -89,6 +89,8 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
+- [https://github.com/flborrelli/covid-19-updates](https://github.com/flborrelli/covid-19-updates), (React + Semantic UI) by [Fernando Lima Borrelli](https://github.com/flborrelli)
+
 
 ## License
 
