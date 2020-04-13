@@ -89,6 +89,7 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
+- [A Dedicated Covid-19 Philippines Tracker](https://covid19.com.ph/), (React, CRA, TailwindCSS) by [Mark Anthony Uy](https://github.com/markanthonyuy)
 
 ## License
 
