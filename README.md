@@ -124,6 +124,7 @@
 
 - [Corona Count](https://coronacount.co), (Next.js) by [Ankit](https://github.com/nnnkit) [Suraj](https://github.com/suraj122)
 
+- [https://github.com/NicolaLisci/COV1D9](https://github.com/NicolaLisci/COV1D9), (Angular 9, Typescript) by [Nicola Lisci](https://github.com/NicolaLisci) [DEMO](https://cov1d9.web.app/)
 
 ## License
 
