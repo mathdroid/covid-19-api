@@ -132,6 +132,8 @@
 
 - <https://mzaini30.js.org/covid19>. Source: <https://github.com/mzaini30/covid19/>. By: [@mzaini30](https://github.com/mzaini30)
 
+- [https://github.com/oniharnantyo/covid-19-telegram-bot](https://github.com/oniharnantyo/covid-19-telegram-bot), (Telegram Bot, Golang) by [Oni Harnantyo](https://github.com/oniharnantyo/covid-19-telegram-bot)
+
 
 ## License
 
