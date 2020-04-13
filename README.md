@@ -8,7 +8,6 @@
 
 [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/mathdroid/covid-19-api)
 
-
 ## Routes
 
 - /: contains opengraph image for sharing
@@ -43,6 +42,10 @@
 
 1. Clone
 
+    ```bash
+    git clone --depth=1 https://github.com/mathdroid/covid-19-api
+    ```
+
 2. Install deps (`yarn`, `npm install`)
 
 3. Install and register to [ZEIT Now](https://zeit.co/now) if you haven't. This project is exclusively made for the platform.
@@ -55,9 +58,13 @@
 
 - [Android kotlin-mvvm-covid19](https://github.com/rizmaulana/kotlin-mvvm-covid19), (Android) by [Rizki Maulana](https://github.com/rizmaulana)
 
+- [CovidNow](https://github.com/OMIsie11/CovidNow), (Android) by [Oskar Misiewicz](https://github.com/OMIsie11)
+
 - [https://github.com/andreyyoshua/Covid-19](https://github.com/andreyyoshua/Covid-19), (iOS) by [Andrey Yoshua](https://github.com/andreyyoshua)
 
 - [https://github.com/pararang/vue-covid](https://github.com/pararang/vue-covid), (VueJS) by [Muhammad Ikhsan](https://github.com/pararang)
+
+- [Vue Covid 19 monitoring App](https://github.com/princerafid01/covid19), (VueJS) by [Mahmud Rafid](https://github.com/princerafid01) . A [demo](https://covid-19-stat.now.sh).
 
 - [https://github.com/pooladkhay/covid19](https://github.com/pooladkhay/covid19), (React, NextJS) by [Mohammad Javad Pooladkhay](https://mamadev.ir)
 
@@ -88,6 +95,40 @@
 - [https://novel-coronavirus-reports.netlify.com/](https://novel-coronavirus-reports.netlify.com/), (PWA with Map & reports) by [Sharad Raj Singh Maurya](https://github.com/sharadcodes)
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
+
+- [Covid-19 World Map](https://github.com/pvogenthaler/covid-19) (D3.js globe displaying confirmed, recovered, and death counts by country) by [Paige Vogenthaler](https://github.com/pvogenthaler/)
+
+- [https://souryvath.github.io/ng-covid-19/](https://souryvath.github.io/ng-covid-19/), (Angular, ApexCharts) by [Souryvath NIRASAY](https://github.com/souryvath/)
+
+- [Corona-tracker](https://corona-tracker-2020.netlify.com/), (Vue frontend for the API with main focus on India) by [Akash Raju M](https://github.com/akashrajum7) 
+
+- [https://github.com/satyawikananda/Vucovid-Covid-info](https://github.com/satyawikananda/Vucovid-Covid-info), (VueJS, PWA) by [Satya Wikananda](https://github.com/satyawikananda)
+
+- [https://github.com/juanitourquiza/ng-covid-19](https://github.com/juanitourquiza/ng-covid-19) [https://hackeruna.com/covid19/](https://hackeruna.com/covid19/), (Angular) by [Juan Urquiza](https://github.com/juanitourquiza)
+
+- [RN-Covid19](https://github.com/Hamaar/RN-Covid19), (React-Native) by [Hamaar](https://github.com/Hamaar)
+
+- [Last 7 days chart with percentages](https://covidchart.netlify.com/),(Next, React, PWA) by [Mithhu](https://github.com/mithhu)
+
+- [https://livecovid19stats.netlify.com](https://livecovid19stats.netlify.com), (Gatsby, React) by [Dhaiwat Pandya](https://github.com/Dhaiwat10)
+
+- [https://corona-stats-eta.now.sh/](https://corona-stats-eta.now.sh/), (React, Hooks) by [Vitor Boccio](https://github.com/vitorboccio)
+
+- [COVID-19 | Coronavirus Live Stats and Tracker](https://covidstats.ca/), (React) by [Micah Mones](https://github.com/micahmones)
+
+- [https://sandipnirmal.github.io/covid-19-tracker](https://sandipnirmal.github.io/covid-19-tracker), (React PWA) by [Sandip R. Nirmal](https://github.com/sandipnirmal)
+
+- [https://github.com/NoumanHere/COVID-19-Using-Django](https://github.com/NoumanHere/COVID-19-Using-Django), (Django, Python) by [Nouman](https://github.com/NoumanHere/)
+
+- [https://github.com/mazik/corona-tracker/](https://github.com/mazik/corona-tracker/), (A Google Chrome extension for tracking CORONAVIRUS - COVID-19 update) by [Md Mazedul Islam Khan](http://twitter.com/iamazik/)
+
+- [https://github.com/johanneshaberlah/corona-dashboard](https://github.com/johanneshaberlah/corona-dashboard), (Java, Spring) by [Johannes Haberlah](https://github.com/johanneshaberlah)
+
+- [https://krishnatre-siddhartha.github.io/](https://krishnatre-siddhartha.github.io/), (HTML+JS) by [Siddhartha Sharma](https://github.com/krishnatre-siddhartha/)
+
+- [Corona Count](https://coronacount.co), (Next.js) by [Ankit](https://github.com/nnnkit) [Suraj](https://github.com/suraj122)
+
+- [https://github.com/NicolaLisci/COV1D9](https://github.com/NicolaLisci/COV1D9), (Angular 9, Typescript) by [Nicola Lisci](https://github.com/NicolaLisci) [DEMO](https://cov1d9.web.app/)
 
 - <https://mzaini30.js.org/covid19>. Source: <https://github.com/mzaini30/covid19/>. By: [@mzaini30](https://github.com/mzaini30)
 
