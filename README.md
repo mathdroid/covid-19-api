@@ -8,7 +8,6 @@
 
 [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/mathdroid/covid-19-api)
 
-
 ## Routes
 
 - /: contains opengraph image for sharing
@@ -122,6 +121,9 @@
 - [https://github.com/johanneshaberlah/corona-dashboard](https://github.com/johanneshaberlah/corona-dashboard), (Java, Spring) by [Johannes Haberlah](https://github.com/johanneshaberlah)
 
 - [https://krishnatre-siddhartha.github.io/](https://krishnatre-siddhartha.github.io/), (HTML+JS) by [Siddhartha Sharma](https://github.com/krishnatre-siddhartha/)
+
+- [Corona Count](https://coronacount.co), (Next.js) by [Ankit](https://github.com/nnnkit) [Suraj](https://github.com/suraj122)
+
 
 ## License
 
