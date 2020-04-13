@@ -119,6 +119,9 @@
 
 - [https://github.com/mazik/corona-tracker/](https://github.com/mazik/corona-tracker/), (A Google Chrome extension for tracking CORONAVIRUS - COVID-19 update) by [Md Mazedul Islam Khan](http://twitter.com/iamazik/)
 
+- [https://github.com/johanneshaberlah/corona-dashboard](https://github.com/johanneshaberlah/corona-dashboard), (Java, Spring) by [Johannes Haberlah](https://github.com/johanneshaberlah)
+
+
 ## License
 
 MIT License 2020, mathdroid.
