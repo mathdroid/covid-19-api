@@ -83,8 +83,7 @@
 
 - [https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker] (https://github.com/Ghazif-Adeem/COVID-19-Statistics-Checker), (PHP) by [Ghazif Adeem](https://github.com/Ghazif-Adeem)
 
-
-- [https://krishnatre-siddhartha.github.io/] (https://krishnatre-siddhartha.github.io/), (HTML+JS) by [Siddhartha Sharma](https://github.com/krishnatre-siddhartha/)
+- [https://krishnatre-siddhartha.github.io/](https://krishnatre-siddhartha.github.io/), (HTML+JS) by [Siddhartha Sharma](https://github.com/krishnatre-siddhartha/)
 
 
 ## License
