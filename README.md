@@ -142,6 +142,8 @@
 
 - [https://github.com/mastersam07/toju_wa](https://github.com/mastersam07/toju_wa), (Flutter) by [@Mastersam07](https://github.com/mastersam07)
 
+- [https://github.com/flborrelli/covid-19-updates](https://github.com/flborrelli/covid-19-updates), (React + Semantic UI) by [Fernando Lima Borrelli](https://github.com/flborrelli)
+
 
 ## License
 
