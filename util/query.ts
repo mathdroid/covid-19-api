@@ -1,7 +1,7 @@
 const where = {
   confirmed: `(Confirmed > 0)`,
-  deaths: `(Confirmed > 0) AND (Deaths > 0)`,
-  recovered: `(Confirmed > 0) AND (Recovered <> 0)`,
+  deaths: `(Deaths > 0)`,
+  recovered: `(Recovered <> 0)`,
   all: `1=1`
 };
 
@@ -20,22 +20,43 @@ export const createArrayQuery = ({ where, orderByFields }) => ({
   orderByFields
 });
 
-export const queryConfirmed = (countryRegion?: string) =>
+export const queryConfirmed = (
+  countryRegion?: string,
+  shouldUseProvinceState?: boolean
+) =>
   createArrayQuery({
-    where: withCountryRegion(where.confirmed, countryRegion),
-    orderByFields: "Confirmed desc, Country_Region asc, Province_State asc"
+    where: countryRegion
+      ? withCountryRegion(where.confirmed, countryRegion)
+      : where.confirmed,
+    orderByFields: `Confirmed desc, Country_Region asc${
+      shouldUseProvinceState ? ",Province_State asc" : ""
+    }`
   });
 
-export const queryDeaths = (countryRegion?: string) =>
+export const queryDeaths = (
+  countryRegion?: string,
+  shouldUseProvinceState?: boolean
+) =>
   createArrayQuery({
-    where: withCountryRegion(where.deaths, countryRegion),
-    orderByFields: "Deaths desc, Country_Region asc, Province_State asc"
+    where: countryRegion
+      ? withCountryRegion(where.deaths, countryRegion)
+      : where.deaths,
+    orderByFields: `Deaths desc, Country_Region asc${
+      shouldUseProvinceState ? ",Province_State asc" : ""
+    }`
   });
 
-export const queryRecovered = (countryRegion?: string) =>
+export const queryRecovered = (
+  countryRegion?: string,
+  shouldUseProvinceState?: boolean
+) =>
   createArrayQuery({
-    where: withCountryRegion(where.recovered, countryRegion),
-    orderByFields: "Recovered desc, Country_Region asc, Province_State asc"
+    where: countryRegion
+      ? withCountryRegion(where.recovered, countryRegion)
+      : where.recovered,
+    orderByFields: `Recovered desc, Country_Region asc${
+      shouldUseProvinceState ? ",Province_State asc" : ""
+    }`
   });
 
 export const queryLastUpdate = (countryRegion?: string) => ({

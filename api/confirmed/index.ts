@@ -1,4 +1,4 @@
-import { NowResponse } from "@now/node";
+import { NowResponse, NowRequest } from "@now/node";
 import {
   fetchFeatures,
   attributeSpreader,
@@ -6,15 +6,22 @@ import {
   matchCountryCode,
   getIso3Code
 } from "../../util/data";
-import { endpoints } from "../../util/endpoints";
 import { queryConfirmed } from "../../util/query";
+import { getEndpoint } from "../../util/endpoints";
 
-export default async (_, response: NowResponse) => {
-  response.json(
-    (await fetchFeatures(endpoints.cases, queryConfirmed()))
-      .map(attributeSpreader)
-      .map(normalizeKeys)
-      .map(matchCountryCode)
-      .map(getIso3Code)
+// const groupByCountryRegion
+
+export default async (request: NowRequest, response: NowResponse) => {
+  const shouldGroupByCountryRegion = request.query["byCountry"] === "true";
+  const endpoint = getEndpoint(
+    shouldGroupByCountryRegion
+      ? "countryRegion"
+      : (request.query.level as string)
   );
+  const data = (await fetchFeatures(endpoint, queryConfirmed()))
+    .map(attributeSpreader)
+    .map(normalizeKeys)
+    .map(matchCountryCode)
+    .map(getIso3Code);
+  response.json(data);
 };
