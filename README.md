@@ -134,6 +134,7 @@
 
 - [https://github.com/oniharnantyo/covid-19-telegram-bot](https://github.com/oniharnantyo/covid-19-telegram-bot), (Telegram Bot, Golang) by [Oni Harnantyo](https://github.com/oniharnantyo/covid-19-telegram-bot)
 
+- [https://github.com/dabigjoe6/react-native-covid19](https://github.com/dabigjoe6/react-native-covid19), (React Native) by [Joseph Olabisi](https://github.com/dabigjoe6)
 
 ## License
 
