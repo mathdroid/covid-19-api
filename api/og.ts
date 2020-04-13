@@ -32,6 +32,12 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       getLastUpdate(),
       getDailyCases()
     ]);
+    // console.log({
+    //   confirmed,
+    //   recovered,
+    //   deaths,
+    //   lastUpdate
+    // });
     const html = getHtml({
       confirmed,
       recovered,
@@ -47,7 +53,9 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       return;
     }
     const text = "textwoot";
+    // console.log("writing html", html);
     const filePath = await writeTempFile(text, html);
+    // console.log({ filePath });
     const fileUrl = pathToFileURL(filePath);
     const file = await getScreenshot(fileUrl, isDev, width, height);
     res.setHeader("Content-Type", `image/png`);

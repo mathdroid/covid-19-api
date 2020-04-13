@@ -67,22 +67,52 @@ const isEmpty = obj => {
   return true;
 };
 
+export const inferActive = data => {
+  return {
+    ...data,
+    active: data.active || data.confirmed - (data.deaths + data.recovered)
+  };
+};
+
 export const fetchFeatures = async (url, query = {}) => {
-  const endpoint = `${url}${isEmpty(query) ? "" : `?${qs.stringify(query)}`}`;
+  const endpoint = `${url}?${qs.stringify(query)}`;
+  // console.log({ url, query });
   const headers = {
-    "user-agent":
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:75.0) Gecko/20100101 Firefox/75.0",
-    accept: "*/*",
-    "accept-language": "en-US,en;q=0.5",
-    origin: "https://gisanddata.maps.arcgis.com",
-    dnt: "1",
-    connection: "keep-alive",
-    referer: "https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html",
+    authority: "services9.arcgis.com",
     pragma: "no-cache",
     "cache-control": "no-cache",
-    te: "Trailers"
+    "sec-fetch-dest": "empty",
+    "user-agent":
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",
+    dnt: "1",
+    accept: "*/*",
+    origin: "https://gisanddata.maps.arcgis.com",
+    "sec-fetch-site": "same-site",
+    "sec-fetch-mode": "cors",
+    referer: "https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html",
+    "accept-language": "en-US,en;q=0.9,id;q=0.8,ms;q=0.7"
   };
   const response = await fetch(endpoint, { headers });
-  const { features } = await response.json();
-  return features;
+  const data = await response.json();
+  // console.log({
+  //   endpoint,
+  //   query,
+  //   features: data.features
+  // });
+  return Array.isArray(data.features) &&
+    data.features &&
+    data.features.length === 1000
+    ? [
+        ...data.features,
+        ...(await fetchFeatures(url, {
+          ...query,
+          //@ts-ignore
+          resultOffset: (query.resultOffset || 0) + 1000
+        }))
+      ]
+    : data.features;
 };
+
+// export const groupBy = (array: any[], field: string) => {
+
+// }
