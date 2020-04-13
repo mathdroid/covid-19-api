@@ -1,7 +1,7 @@
 const where = {
   confirmed: `(Confirmed > 0)`,
-  deaths: `(Confirmed > 0) AND (Deaths > 0)`,
-  recovered: `(Confirmed > 0) AND (Recovered <> 0)`,
+  deaths: `(Deaths > 0)`,
+  recovered: `(Recovered <> 0)`,
   all: `1=1`
 };
 
@@ -27,7 +27,7 @@ export const queryConfirmed = (
   createArrayQuery({
     where: countryRegion
       ? withCountryRegion(where.confirmed, countryRegion)
-      : where.all,
+      : where.confirmed,
     orderByFields: `Confirmed desc, Country_Region asc${
       shouldUseProvinceState ? ",Province_State asc" : ""
     }`
@@ -40,7 +40,7 @@ export const queryDeaths = (
   createArrayQuery({
     where: countryRegion
       ? withCountryRegion(where.deaths, countryRegion)
-      : where.all,
+      : where.deaths,
     orderByFields: `Deaths desc, Country_Region asc${
       shouldUseProvinceState ? ",Province_State asc" : ""
     }`
@@ -53,7 +53,7 @@ export const queryRecovered = (
   createArrayQuery({
     where: countryRegion
       ? withCountryRegion(where.recovered, countryRegion)
-      : where.all,
+      : where.recovered,
     orderByFields: `Recovered desc, Country_Region asc${
       shouldUseProvinceState ? ",Province_State asc" : ""
     }`

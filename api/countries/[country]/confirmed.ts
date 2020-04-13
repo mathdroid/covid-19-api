@@ -4,8 +4,7 @@ import {
   fetchFeatures,
   attributeSpreader,
   normalizeKeys,
-  matchCountryCode,
-  getIso3Code
+  inferActive
 } from "../../../util/data";
 import { getEndpoint } from "../../../util/endpoints";
 import { queryConfirmed } from "../../../util/query";
@@ -13,17 +12,19 @@ import { getCountryName } from "../../../util/countries";
 
 export default async (req: NowRequest, response: NowResponse) => {
   try {
+    const country = getCountryName(req.query.country as string);
     response.json(
       (
         await fetchFeatures(
-          getEndpoint(req.query.level as string),
+          getEndpoint(
+            country === "US" ? (req.query.level as string) : "county"
+          ),
           queryConfirmed(getCountryName(req.query.country as string))
         )
       )
         .map(attributeSpreader)
         .map(normalizeKeys)
-        .map(matchCountryCode)
-        .map(getIso3Code)
+        .map(inferActive)
     );
   } catch (error) {
     response.statusCode = 404;
