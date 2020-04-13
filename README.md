@@ -97,6 +97,9 @@
 
 - [https://github.com/satyawikananda/Vucovid-Covid-info](https://github.com/satyawikananda/Vucovid-Covid-info), (VueJS, PWA) by [Satya Wikananda](https://github.com/satyawikananda)
 
+- [https://github.com/juanitourquiza/ng-covid-19](https://github.com/juanitourquiza/ng-covid-19) [https://hackeruna.com/covid19/](https://hackeruna.com/covid19/), (Angular) by [Juan Urquiza](https://github.com/juanitourquiza)
+
+
 ## License
 
 MIT License 2020, mathdroid.
