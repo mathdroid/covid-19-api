@@ -93,6 +93,8 @@
 
 - [https://souryvath.github.io/ng-covid-19/](https://souryvath.github.io/ng-covid-19/), (Angular, ApexCharts) by [Souryvath NIRASAY](https://github.com/souryvath/)
 
+- [Corona-tracker](https://corona-tracker-2020.netlify.com/), (Vue frontend for the API with main focus on India) by [Akash Raju M](https://github.com/akashrajum7) 
+
 ## License
 
 MIT License 2020, mathdroid.
