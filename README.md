@@ -130,6 +130,9 @@
 
 - [https://github.com/NicolaLisci/COV1D9](https://github.com/NicolaLisci/COV1D9), (Angular 9, Typescript) by [Nicola Lisci](https://github.com/NicolaLisci) [DEMO](https://cov1d9.web.app/)
 
+- <https://mzaini30.js.org/covid19>. Source: <https://github.com/mzaini30/covid19/>. By: [@mzaini30](https://github.com/mzaini30)
+
+
 ## License
 
 MIT License 2020, mathdroid.
