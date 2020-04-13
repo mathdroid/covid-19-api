@@ -20,6 +20,7 @@ export default async (req: NowRequest, response: NowResponse) => {
       getTotalDeaths(country),
       getLastUpdate(country)
     ]);
+    // console.log({ confirmed, recovered, deaths, lastUpdate });
     response.json({
       confirmed: {
         value: confirmed,
