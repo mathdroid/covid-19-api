@@ -107,6 +107,8 @@
 
 - [https://livecovid19stats.netlify.com](https://livecovid19stats.netlify.com), (Gatsby, React) by [Dhaiwat Pandya](https://github.com/Dhaiwat10)
 
+- [https://corona-stats-eta.now.sh/](https://corona-stats-eta.now.sh/), (React, Hooks) by [Vitor Boccio](https://github.com/vitorboccio)
+
 ## License
 
 MIT License 2020, mathdroid.
