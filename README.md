@@ -136,6 +136,9 @@
 
 - [https://github.com/dabigjoe6/react-native-covid19](https://github.com/dabigjoe6/react-native-covid19), (React Native) by [Joseph Olabisi](https://github.com/dabigjoe6)
 
+- [https://fight-covid19.netlify.app/](https://fight-covid19.netlify.app/), (Gatsby, React) by [Jason Zheng](https://github.com/bilafish)
+
+
 ## License
 
 MIT License 2020, mathdroid.
