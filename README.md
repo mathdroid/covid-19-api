@@ -42,6 +42,10 @@
 
 1. Clone
 
+    ```bash
+    git clone --depth=1 https://github.com/mathdroid/covid-19-api
+    ```
+
 2. Install deps (`yarn`, `npm install`)
 
 3. Install and register to [ZEIT Now](https://zeit.co/now) if you haven't. This project is exclusively made for the platform.
