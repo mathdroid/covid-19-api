@@ -55,6 +55,8 @@
 
 - [Android kotlin-mvvm-covid19](https://github.com/rizmaulana/kotlin-mvvm-covid19), (Android) by [Rizki Maulana](https://github.com/rizmaulana)
 
+- [CovidNow](https://github.com/OMIsie11/CovidNow), (Android) by [Oskar Misiewicz](https://github.com/OMIsie11)
+
 - [https://github.com/andreyyoshua/Covid-19](https://github.com/andreyyoshua/Covid-19), (iOS) by [Andrey Yoshua](https://github.com/andreyyoshua)
 
 - [https://github.com/pararang/vue-covid](https://github.com/pararang/vue-covid), (VueJS) by [Muhammad Ikhsan](https://github.com/pararang)
