@@ -138,6 +138,8 @@
 
 - [https://fight-covid19.netlify.app/](https://fight-covid19.netlify.app/), (Gatsby, React) by [Jason Zheng](https://github.com/bilafish)
 
+- [https://github.com/mastersam07/toju_wa](https://github.com/mastersam07/toju_wa), (Flutter) by [@Mastersam07](https://github.com/mastersam07)
+
 
 ## License
 
