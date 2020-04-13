@@ -95,6 +95,8 @@
 
 - [Corona-tracker](https://corona-tracker-2020.netlify.com/), (Vue frontend for the API with main focus on India) by [Akash Raju M](https://github.com/akashrajum7) 
 
+- [https://github.com/satyawikananda/Vucovid-Covid-info](https://github.com/satyawikananda/Vucovid-Covid-info), (VueJS, PWA) by [Satya Wikananda](https://github.com/satyawikananda)
+
 ## License
 
 MIT License 2020, mathdroid.
