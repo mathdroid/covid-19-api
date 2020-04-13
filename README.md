@@ -101,6 +101,7 @@
 
 - [RN-Covid19](https://github.com/Hamaar/RN-Covid19), (React-Native) by [Hamaar](https://github.com/Hamaar)
 
+- [Last 7 days chart with percentages](https://covidchart.netlify.com/),(Next, React, PWA) by [Mithhu](https://github.com/mithhu)
 
 ## License
 
