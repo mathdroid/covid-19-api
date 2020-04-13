@@ -91,6 +91,8 @@
 
 - [A Dedicated Covid-19 Philippines Tracker](https://covid19.com.ph/), (React, CRA, TailwindCSS) by [Mark Anthony Uy](https://github.com/markanthonyuy)
 
+- [Covid-19 World Map](https://github.com/pvogenthaler/covid-19) (D3.js globe displaying confirmed, recovered, and death counts by country) by [Paige Vogenthaler](https://github.com/pvogenthaler/)
+
 ## License
 
 MIT License 2020, mathdroid.
