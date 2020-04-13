@@ -11,21 +11,30 @@ import {
   queryTotalConfirmed,
   queryTotalRecovered,
   queryLastUpdate,
-  queryCasesTimeSeries
+  queryCasesTimeSeries,
+  queryConfirmed
 } from "./query";
-import { getCountryName } from "./countries";
+import { getCountryName, countries } from "./countries";
 import { getIsoDateFromUnixTime } from "./date";
 
+const getRecoveredUS = async () => {
+  return (await fetchFeatures(endpoints.casesCounty, queryConfirmed()))
+    .filter(d => d.attributes["Country_Region"] === "US")
+    .map(d => d.attributes.Recovered);
+};
+
 export const getTotalConfirmed = async (countryName?: string) => {
+  const name = getCountryName(countryName);
   return extractSingleValue(
-    await fetchFeatures(
-      endpoints.casesCounty,
-      queryTotalConfirmed(getCountryName(countryName))
-    )
+    await fetchFeatures(endpoints.casesCounty, queryTotalConfirmed(name))
   );
 };
 
 export const getTotalRecovered = async (countryName?: string) => {
+  const name = getCountryName(countryName);
+  // if (name === "US") {
+  //   return getRecoveredUS();
+  // }
   return extractSingleValue(
     await fetchFeatures(
       endpoints.casesCounty,
@@ -105,8 +114,8 @@ export const getDailyCases = async () => {
       const deltaConfirmed =
         cur.deltaConfirmed +
         ((acc[cur.date] &&
-          acc[cur.date].deltaConfirmed &&
-          acc[cur.date].deltaConfirmed.total) ||
+          acc[cur.date].deltaConfirmedDetail &&
+          acc[cur.date].deltaConfirmedDetail.total) ||
           0);
 
       const totalRecovered =
@@ -119,6 +128,7 @@ export const getDailyCases = async () => {
       return {
         ...acc,
         [cur.date]: {
+          // cur: [...((acc[cur.date] && acc[cur.date].cur) || []), cur],
           totalConfirmed,
           mainlandChina,
           otherLocations,
@@ -134,14 +144,14 @@ export const getDailyCases = async () => {
             china:
               (cur.countryRegion === "China" ? cur.deltaConfirmed : 0) +
               ((acc[cur.date] &&
-                acc[cur.date].deltaConfirmed &&
-                acc[cur.date].deltaConfirmed.china) ||
+                acc[cur.date].deltaConfirmedDetail &&
+                acc[cur.date].deltaConfirmedDetail.china) ||
                 0),
             outsideChina:
               (cur.countryRegion !== "China" ? cur.deltaConfirmed : 0) +
               ((acc[cur.date] &&
-                acc[cur.date].deltaConfirmed &&
-                acc[cur.date].deltaConfirmed.outsideChina) ||
+                acc[cur.date].deltaConfirmedDetail &&
+                acc[cur.date].deltaConfirmedDetail.outsideChina) ||
                 0)
           },
           deaths: {
