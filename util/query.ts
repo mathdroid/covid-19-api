@@ -1,7 +1,7 @@
 const where = {
   confirmed: `(Confirmed > 0)`,
-  deaths: `(Confirmed > 0) AND (Deaths > 0)`,
-  recovered: `(Confirmed > 0) AND (Recovered <> 0)`,
+  deaths: `(Deaths > 0)`,
+  recovered: `(Recovered <> 0)`,
   all: `1=1`
 };
 

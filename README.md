@@ -59,6 +59,8 @@
 
 - [https://github.com/pararang/vue-covid](https://github.com/pararang/vue-covid), (VueJS) by [Muhammad Ikhsan](https://github.com/pararang)
 
+- [Vue Covid 19 monitoring App](https://github.com/princerafid01/covid19), (VueJS) by [Mahmud Rafid](https://github.com/princerafid01) . A [demo](https://covid-19-stat.now.sh).
+
 - [https://github.com/pooladkhay/covid19](https://github.com/pooladkhay/covid19), (React, NextJS) by [Mohammad Javad Pooladkhay](https://mamadev.ir)
 
 - [https://github.com/alancampora/corona-virus-react](https://github.com/alancampora/corona-virus-react), (React) by [Alan Adrian Campora](https://github.com/alancampora)
@@ -89,7 +91,30 @@
 
 - [https://github.com/sutanlab/covid19-visualized](https://github.com/sutanlab/covid19-visualized), (Next.js, TypeScript) by [Sutan Gading F. Nasution](https://github.com/sutanlab)
 
+- [Covid-19 World Map](https://github.com/pvogenthaler/covid-19) (D3.js globe displaying confirmed, recovered, and death counts by country) by [Paige Vogenthaler](https://github.com/pvogenthaler/)
+
+- [https://souryvath.github.io/ng-covid-19/](https://souryvath.github.io/ng-covid-19/), (Angular, ApexCharts) by [Souryvath NIRASAY](https://github.com/souryvath/)
+
+- [Corona-tracker](https://corona-tracker-2020.netlify.com/), (Vue frontend for the API with main focus on India) by [Akash Raju M](https://github.com/akashrajum7) 
+
+- [https://github.com/satyawikananda/Vucovid-Covid-info](https://github.com/satyawikananda/Vucovid-Covid-info), (VueJS, PWA) by [Satya Wikananda](https://github.com/satyawikananda)
+
+- [https://github.com/juanitourquiza/ng-covid-19](https://github.com/juanitourquiza/ng-covid-19) [https://hackeruna.com/covid19/](https://hackeruna.com/covid19/), (Angular) by [Juan Urquiza](https://github.com/juanitourquiza)
+
+- [RN-Covid19](https://github.com/Hamaar/RN-Covid19), (React-Native) by [Hamaar](https://github.com/Hamaar)
+
+- [Last 7 days chart with percentages](https://covidchart.netlify.com/),(Next, React, PWA) by [Mithhu](https://github.com/mithhu)
+
+- [https://livecovid19stats.netlify.com](https://livecovid19stats.netlify.com), (Gatsby, React) by [Dhaiwat Pandya](https://github.com/Dhaiwat10)
+
+- [https://corona-stats-eta.now.sh/](https://corona-stats-eta.now.sh/), (React, Hooks) by [Vitor Boccio](https://github.com/vitorboccio)
+
+- [COVID-19 | Coronavirus Live Stats and Tracker](https://covidstats.ca/), (React) by [Micah Mones](https://github.com/micahmones)
+
+- [https://sandipnirmal.github.io/covid-19-tracker](https://sandipnirmal.github.io/covid-19-tracker), (React PWA) by [Sandip R. Nirmal](https://github.com/sandipnirmal)
+
 - [https://github.com/NoumanHere/COVID-19-Using-Django](https://github.com/NoumanHere/COVID-19-Using-Django), (Django, Python) by [Nouman](https://github.com/NoumanHere/)
+
 ## License
 
 MIT License 2020, mathdroid.
