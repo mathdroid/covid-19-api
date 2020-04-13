@@ -91,6 +91,7 @@
 
 - [Covid-19 World Map](https://github.com/pvogenthaler/covid-19) (D3.js globe displaying confirmed, recovered, and death counts by country) by [Paige Vogenthaler](https://github.com/pvogenthaler/)
 
+- [https://souryvath.github.io/ng-covid-19/](https://souryvath.github.io/ng-covid-19/), (Angular, ApexCharts) by [Souryvath NIRASAY](https://github.com/souryvath/)
 
 ## License
 
