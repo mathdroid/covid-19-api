@@ -105,6 +105,8 @@
 
 - [Last 7 days chart with percentages](https://covidchart.netlify.com/),(Next, React, PWA) by [Mithhu](https://github.com/mithhu)
 
+- [https://livecovid19stats.netlify.com](https://livecovid19stats.netlify.com), (Gatsby, React) by [Dhaiwat Pandya](https://github.com/Dhaiwat10)
+
 ## License
 
 MIT License 2020, mathdroid.
