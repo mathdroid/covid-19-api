@@ -109,6 +109,7 @@
 
 - [https://corona-stats-eta.now.sh/](https://corona-stats-eta.now.sh/), (React, Hooks) by [Vitor Boccio](https://github.com/vitorboccio)
 
+- [https://sandipnirmal.github.io/covid-19-tracker](https://sandipnirmal.github.io/covid-19-tracker), (React PWA) by [Sandip R. Nirmal](https://github.com/sandipnirmal)
 ## License
 
 MIT License 2020, mathdroid.
