@@ -144,6 +144,7 @@
 
 - [https://github.com/flborrelli/covid-19-updates](https://github.com/flborrelli/covid-19-updates), (React + Semantic UI) by [Fernando Lima Borrelli](https://github.com/flborrelli)
 
+- [https://github.com/melvinalmonte/covid-bot](https://github.com/melvinalmonte/covid-bot), (Chatbot using Google's Dialogflow + NextJS Wrapper) by [Melvin Almonte](https://github.com/melvinalmonte)
 
 ## License
 
