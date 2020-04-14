@@ -156,7 +156,7 @@
 
 - [https://tracking-corona.web.app/](https://tracking-corona.web.app/) [https://github.com/JakMar17/CoronaTracker](https://github.com/JakMar17/CoronaTracker) by [JakMar17](https://github.com/JakMar17)
 
-- [https://covid19site.netlify.com/](https://covid19site.netlify.com/) [https://github.com/ihsaninh/Covid19-Info-Vue](https://github.com/ihsaninh/Covid19-Info-Vue) (Vue.js) by [ihsaninh](https://github.com/ihsaninh)
+- [https://covid19site.netlify.com/](https://covid19site.netlify.com/) (Vue.js) by [ihsaninh](https://github.com/ihsaninh)
 
 ## License
 
