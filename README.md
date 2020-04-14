@@ -144,7 +144,17 @@
 
 - [https://github.com/flborrelli/covid-19-updates](https://github.com/flborrelli/covid-19-updates), (React + Semantic UI) by [Fernando Lima Borrelli](https://github.com/flborrelli)
 
+- [covid19-graphql-api.herokuapp.com](https://covid19-graphql-api.herokuapp.com/api/graphql), (GraphQL) by [Rene Osman](https://github.com/rosman21)
+
+- [http://corona.milestonetechs.com/](http://corona.milestonetechs.com/) by [omarjamal1](https://github.com/omarjamal1)
+
+- [https://coronnavirusapp.firebaseapp.com/](https://coronnavirusapp.firebaseapp.com/), (Angular/Ionic) by [Rayden2015](https://github.com/Rayden2015)
+
 - [https://github.com/melvinalmonte/covid-bot](https://github.com/melvinalmonte/covid-bot), (Chatbot using Google's Dialogflow + NextJS Wrapper) by [Melvin Almonte](https://github.com/melvinalmonte)
+
+- [https://cdmoro.github.io/covid-19-stats/](https://cdmoro.github.io/covid-19-stats/) [https://github.com/cdmoro/covid-19-stats](https://github.com/cdmoro/covid-19-stats) React, by [cdmoro](https://github.com/cdmoro)
+
+- [https://tracking-corona.web.app/](https://tracking-corona.web.app/) [https://github.com/JakMar17/CoronaTracker](https://github.com/JakMar17/CoronaTracker) by [JakMar17](https://github.com/JakMar17)
 
 ## License
 
