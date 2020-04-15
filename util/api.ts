@@ -69,7 +69,7 @@ export const getConfirmedGraph = async (resultOffset = 0) => {
       `https://services9.arcgis.com/N9p5hsImWXAccRNI/arcgis/rest/services/Nc2JKvYFoAEOFCG5JSI6/FeatureServer/4/query`,
       {
         f: `json`,
-        where: `1=1`,
+        where: `(UID <> 840) AND (Confirmed<>0)`,
         returnGeometry: false,
         spatialRel: `esriSpatialRelIntersects`,
         outFields: `*`,
