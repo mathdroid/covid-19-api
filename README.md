@@ -156,6 +156,10 @@
 
 - [https://tracking-corona.web.app/](https://tracking-corona.web.app/) [https://github.com/JakMar17/CoronaTracker](https://github.com/JakMar17/CoronaTracker) by [JakMar17](https://github.com/JakMar17)
 
+- [https://covid19site.netlify.com/](https://covid19site.netlify.com/) (Vue.js) by [Ihsan Nurul Habib](https://github.com/ihsaninh)
+
+- [https://github.com/ihsaninh/covid-19-reactnative](https://github.com/ihsaninh/covid-19-reactnative), (React Native) by [Ihsan Nurul Habib](https://github.com/ihsaninh)
+
 ## License
 
 MIT License 2020, mathdroid.
