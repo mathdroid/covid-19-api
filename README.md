@@ -160,6 +160,8 @@
 
 - [https://github.com/ihsaninh/covid-19-reactnative](https://github.com/ihsaninh/covid-19-reactnative), (React Native) by [Ihsan Nurul Habib](https://github.com/ihsaninh)
 
+- [https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker](https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker), (Flutter) by [Abdullah Chauhan](https://github.com/AbdullahChauhan)
+
 ## License
 
 MIT License 2020, mathdroid.
