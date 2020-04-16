@@ -162,6 +162,8 @@
 
 - [https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker](https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker), (Flutter) by [Abdullah Chauhan](https://github.com/AbdullahChauhan)
 
+- [https://github.com/awesome-cli/coronavirus-report](https://github.com/awesome-cli/coronavirus-report), (Node, Commander) by [Jakub Biesiada](https://github.com/JB1905)
+
 ## License
 
 MIT License 2020, mathdroid.
