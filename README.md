@@ -162,6 +162,8 @@
 
 - [https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker](https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker), (Flutter) by [Abdullah Chauhan](https://github.com/AbdullahChauhan)
 
+- [https://github.com/melvinalmonte/covid-bot](https://github.com/melvinalmonte/covid-bot), (Chatbot using Google's Dialogflow + NextJS Wrapper) by [Melvin Almonte](https://github.com/melvinalmonte)
+
 ## License
 
 MIT License 2020, mathdroid.
