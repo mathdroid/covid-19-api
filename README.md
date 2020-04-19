@@ -162,6 +162,8 @@
 
 - [https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker](https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker), (Flutter) by [Abdullah Chauhan](https://github.com/AbdullahChauhan)
 
+- [https://kennethesguerra.github.io/covid-19-stat/](https://kennethesguerra.github.io/covid-19-stat/) [https://github.com/kennethesguerra/covid-19-stat](https://github.com/kennethesguerra/covid-19-stat) (React) by [Ken Esguerra](https://github.com/kennethesguerra)
+
 ## License
 
 MIT License 2020, mathdroid.
