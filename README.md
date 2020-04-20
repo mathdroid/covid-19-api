@@ -162,6 +162,9 @@
 
 - [https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker](https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker), (Flutter) by [Abdullah Chauhan](https://github.com/AbdullahChauhan)
 
+- [Coronavirus Stats ePaper Wearable](https://github.com/admiral-tryptamine/covid19_LILYGO_T5_V23) coded by [breakstring](https://github.com/breakstring/covid19_e-paper). Adapted to Lilygo T5 V2.3 ESP32 board by [admiral-tryptamine](https://github.com/admiral-tryptamine)
+
+
 ## License
 
 MIT License 2020, mathdroid.
