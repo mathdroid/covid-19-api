@@ -162,6 +162,8 @@
 
 - [https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker](https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker), (Flutter) by [Abdullah Chauhan](https://github.com/AbdullahChauhan)
 
+- [https://pantau-covid19.now.sh](https://pantau-covid19.now.sh), (React Js + Redux-Saga) by [Muh Faishal I](https://github.com/muhfaishali)
+
 ## License
 
 MIT License 2020, mathdroid.
