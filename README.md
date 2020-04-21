@@ -162,6 +162,8 @@
 
 - [https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker](https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker), (Flutter) by [Abdullah Chauhan](https://github.com/AbdullahChauhan)
 
+- [https://covid19-status-tracker.netlify.app/](https://covid19-status-tracker.netlify.app/), (react, material ui) by [Kamlesh Kumar Jha](https://github.com/kamleshkrjha/covid-19-status-tracker)
+
 ## License
 
 MIT License 2020, mathdroid.
