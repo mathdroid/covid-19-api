@@ -162,6 +162,8 @@
 
 - [https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker](https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker), (Flutter) by [Abdullah Chauhan](https://github.com/AbdullahChauhan)
 
+- [https://github.com/febryardiansyah/covid19_app/](https://github.com/febryardiansyah/covid19_app), (Flutter) by [Febry Ardiansyah](https://github.com/febryardiansyah)
+
 ## License
 
 MIT License 2020, mathdroid.
