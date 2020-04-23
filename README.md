@@ -162,6 +162,8 @@
 
 - [https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker](https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker), (Flutter) by [Abdullah Chauhan](https://github.com/AbdullahChauhan)
 
+- [https://github.com/dynamicbalaji/covid19-tracker](https://github.com/dynamicbalaji/covid19-tracker), (React) by [Balaji Ashok Kumar(BK)](https://github.com/dynamicbalaji)
+
 ## License
 
 MIT License 2020, mathdroid.
