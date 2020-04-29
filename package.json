@@ -16,7 +16,7 @@
     "qs": "^6.9.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-typescript": "^7.9.0",
     "@now/node": "^1.5.1",
