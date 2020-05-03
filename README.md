@@ -56,6 +56,8 @@
 
 - [17 responsible live visualizations about the coronavirus, for you to use](https://blog.datawrapper.de/coronaviruscharts/), (Web) by [Datawrapper](https://datawrapper.de)
 
+- [pandemic-live (covid19)](https://github.com/rk4bir/pandemic-live), (Android with Flutter) by [Raihan Kabir](https://github.com/rk4bir)
+
 - [Android kotlin-mvvm-covid19](https://github.com/rizmaulana/kotlin-mvvm-covid19), (Android) by [Rizki Maulana](https://github.com/rizmaulana)
 
 - [CovidNow](https://github.com/OMIsie11/CovidNow), (Android) by [Oskar Misiewicz](https://github.com/OMIsie11)
