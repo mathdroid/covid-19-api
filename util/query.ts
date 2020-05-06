@@ -1,15 +1,15 @@
 const where = {
   confirmed: `(Confirmed > 0)`,
   deaths: `(Deaths > 0)`,
-  recovered: `(Recovered <> 0)`,
-  all: `1=1`
+  recovered: `(Recovered > 0)`,
+  all: `1=1`,
 };
 
 export const createQuery = ({ where }) => ({
   f: "json",
   outFields: "*",
   returnGeometry: false,
-  where
+  where,
 });
 
 export const withCountryRegion = (where: string, countryRegion?: string) =>
@@ -17,7 +17,7 @@ export const withCountryRegion = (where: string, countryRegion?: string) =>
 
 export const createArrayQuery = ({ where, orderByFields }) => ({
   ...createQuery({ where }),
-  orderByFields
+  orderByFields,
 });
 
 export const queryConfirmed = (
@@ -30,7 +30,7 @@ export const queryConfirmed = (
       : where.confirmed,
     orderByFields: `Confirmed desc, Country_Region asc${
       shouldUseProvinceState ? ",Province_State asc" : ""
-    }`
+    }`,
   });
 
 export const queryDeaths = (
@@ -43,7 +43,7 @@ export const queryDeaths = (
       : where.deaths,
     orderByFields: `Deaths desc, Country_Region asc${
       shouldUseProvinceState ? ",Province_State asc" : ""
-    }`
+    }`,
   });
 
 export const queryRecovered = (
@@ -56,42 +56,42 @@ export const queryRecovered = (
       : where.recovered,
     orderByFields: `Recovered desc, Country_Region asc${
       shouldUseProvinceState ? ",Province_State asc" : ""
-    }`
+    }`,
   });
 
 export const queryLastUpdate = (countryRegion?: string) => ({
   ...createArrayQuery({
     where: withCountryRegion(where.confirmed, countryRegion),
-    orderByFields: "Last_Update desc"
+    orderByFields: "Last_Update desc",
   }),
-  resultRecordCount: 1
+  resultRecordCount: 1,
 });
 
 export const createTotalQuery = ({ where, field }) => ({
   ...createQuery({ where }),
-  outStatistics: `[{"statisticType":"sum","onStatisticField":"${field}","outStatisticFieldName":"value"}]`
+  outStatistics: `[{"statisticType":"sum","onStatisticField":"${field}","outStatisticFieldName":"value"}]`,
 });
 
 export const queryTotalConfirmed = (countryRegion?: string) =>
   createTotalQuery({
     where: withCountryRegion(where.confirmed, countryRegion),
-    field: "Confirmed"
+    field: "Confirmed",
   });
 
 export const queryTotalDeaths = (countryRegion?: string) =>
   createTotalQuery({
     where: withCountryRegion(where.deaths, countryRegion),
-    field: "Deaths"
+    field: "Deaths",
   });
 
 export const queryTotalRecovered = (countryRegion?: string) =>
   createTotalQuery({
     where: withCountryRegion(where.recovered, countryRegion),
-    field: "Recovered"
+    field: "Recovered",
   });
 
 export const queryCasesTimeSeries = () =>
   createArrayQuery({
     where: where.all,
-    orderByFields: "Report_Date_String asc"
+    orderByFields: "Report_Date_String asc",
   });
