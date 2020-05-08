@@ -164,6 +164,8 @@
 
 - [https://github.com/dynamicbalaji/covid19-tracker](https://github.com/dynamicbalaji/covid19-tracker), (React) by [Balaji Ashok Kumar(BK)](https://github.com/dynamicbalaji)
 
+- [Corona Virus Tracker](https://virtuosars.github.io/CovidLive), (React) by [@VirtuosArs](https://github.com/VirtuosArs)
+
 ## License
 
 MIT License 2020, mathdroid.
