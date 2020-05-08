@@ -1013,10 +1013,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@now/node@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@now/node/-/node-1.5.1.tgz#e0d559ea5d1efaa5cc8a7c35208aa6ad01634ab2"
-  integrity sha512-2nXhdqo4aNShHuTwbdQmZQX4jYXAoI85+FTPStD5DZVC3kbSS8m5RDxJu7Op7ffBPwIu8Nmp6ukjXct3Abad7g==
+"@now/node@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@now/node/-/node-1.6.0.tgz#e662de9836d0db48dbb27a2fdb7bf26bbec4e1af"
+  integrity sha512-evU4QrZ3RYRNIQKJt8wrwoCHgnnZpRbTHNdmgmLs9eriOFejf3jIIEPxzkq0vFZ2wC2SP3W02WMl6SK6LZJuKQ==
   dependencies:
     "@types/node" "*"
 
