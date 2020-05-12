@@ -164,6 +164,8 @@
 
 - [https://github.com/dynamicbalaji/covid19-tracker](https://github.com/dynamicbalaji/covid19-tracker), (React) by [Balaji Ashok Kumar(BK)](https://github.com/dynamicbalaji)
 
+- [https://github.com/sabesansathananthan/covid-19-tracker](https://github.com/sabesansathananthan/covid-19-tracker), (React, Material UI, react-chartjs-2) by [Sabesan Sathananthan](https://github.com/sabesansathananthan)
+
 ## License
 
 MIT License 2020, mathdroid.
