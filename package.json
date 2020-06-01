@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.1",
-    "@babel/preset-env": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
     "@babel/preset-typescript": "^7.10.1",
     "@now/node": "^1.6.1",
     "@types/jest": "^25.2.3",
