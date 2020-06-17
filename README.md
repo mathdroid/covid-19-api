@@ -164,6 +164,8 @@
 
 - [https://github.com/dynamicbalaji/covid19-tracker](https://github.com/dynamicbalaji/covid19-tracker), (React) by [Balaji Ashok Kumar(BK)](https://github.com/dynamicbalaji)
 
+- [https://covid19.sznm.dev](https://covid19.sznm.dev), (Gatsby, Nivo) by [Agustinus Nathaniel](https://github.com/sozonome)
+
 ## License
 
 MIT License 2020, mathdroid.
