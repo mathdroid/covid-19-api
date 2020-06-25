@@ -164,6 +164,8 @@
 
 - [https://github.com/dynamicbalaji/covid19-tracker](https://github.com/dynamicbalaji/covid19-tracker), (React) by [Balaji Ashok Kumar(BK)](https://github.com/dynamicbalaji)
 
+- [https://github.com/lovanto/covid-today](https://github.com/lovanto/covid-today), (HTML+JS) by [Rifky Lovanto](https://github.com/lovanto)
+
 ## License
 
 MIT License 2020, mathdroid.
