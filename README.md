@@ -164,6 +164,8 @@
 
 - [https://github.com/dynamicbalaji/covid19-tracker](https://github.com/dynamicbalaji/covid19-tracker), (React) by [Balaji Ashok Kumar(BK)](https://github.com/dynamicbalaji)
 
+- [http://blog.wenzlaff.de/?p=14158](http://blog.wenzlaff.de/?p=14158), (Native Java Sample) by [Thomas Wenzlaff](https://github.com/IT-Berater)
+
 ## License
 
 MIT License 2020, mathdroid.
