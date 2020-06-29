@@ -54,6 +54,8 @@
 
 ## Showcase
 
+- [Create a Github Action that Send Everyday Covid19 Status Through Telegram Using Python](https://dev.to/spiritbro1/create-a-github-action-that-send-everyday-covid19-status-through-telegram-using-python-3l78), (Telegram Bot) by [catflip](https://github.com/catflip)
+
 - [17 responsible live visualizations about the coronavirus, for you to use](https://blog.datawrapper.de/coronaviruscharts/), (Web) by [Datawrapper](https://datawrapper.de)
 
 - [Android kotlin-mvvm-covid19](https://github.com/rizmaulana/kotlin-mvvm-covid19), (Android) by [Rizki Maulana](https://github.com/rizmaulana)
