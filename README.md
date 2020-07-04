@@ -164,6 +164,8 @@
 
 - [https://github.com/dynamicbalaji/covid19-tracker](https://github.com/dynamicbalaji/covid19-tracker), (React) by [Balaji Ashok Kumar(BK)](https://github.com/dynamicbalaji)
 
+[https://github.com/ZuTechV2/c19stats](https://github.com/ZuTechV2/c19stats), [https://zu-c19stats.netlify.app](https://zu-c19stats.netlify.app), (VueJS) by [ Zu Tech V2 ] (https://github.com/ZuTechV2)
+
 ## License
 
 MIT License 2020, mathdroid.
