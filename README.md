@@ -168,4 +168,4 @@
 
 MIT License 2020, mathdroid.
 
-Transitively from the John Hopkins Site, the data may not be used for commercial purposes.
+Transitively from the Johns Hopkins Site, the data may not be used for commercial purposes.
