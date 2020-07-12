@@ -54,6 +54,8 @@
 
 ## Showcase
 
+- [Create a Github Action that Send Everyday Covid19 Status Through Telegram Using Python](https://dev.to/spiritbro1/create-a-github-action-that-send-everyday-covid19-status-through-telegram-using-python-3l78), (Telegram Bot) by [catflip](https://github.com/catflip)
+
 - [17 responsible live visualizations about the coronavirus, for you to use](https://blog.datawrapper.de/coronaviruscharts/), (Web) by [Datawrapper](https://datawrapper.de)
 
 - [Android kotlin-mvvm-covid19](https://github.com/rizmaulana/kotlin-mvvm-covid19), (Android) by [Rizki Maulana](https://github.com/rizmaulana)
@@ -166,8 +168,11 @@
 
 - [https://covid19.sznm.dev](https://covid19.sznm.dev), (Gatsby, Nivo) by [Agustinus Nathaniel](https://github.com/sozonome)
 
+- [https://github.com/ZuTechV2/c19stats](https://github.com/ZuTechV2/c19stats), [https://zu-c19stats.netlify.app](https://zu-c19stats.netlify.app), (VueJS) by [Zu Tech V2](https://github.com/ZuTechV2)
+
+
 ## License
 
 MIT License 2020, mathdroid.
 
-Transitively from the John Hopkins Site, the data may not be used for commercial purposes.
+Transitively from the Johns Hopkins Site, the data may not be used for commercial purposes.
