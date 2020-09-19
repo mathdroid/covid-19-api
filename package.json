@@ -25,6 +25,6 @@
     "babel-jest": "^26.3.0",
     "jest": "^26.4.2",
     "objects-to-csv": "^1.3.6",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.3"
   }
 }
