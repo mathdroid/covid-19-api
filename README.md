@@ -2,7 +2,7 @@
   <img width="500" src="https://covid19.mathdro.id/api/og" />
 </p>
 
-# COVID-19 API
+# COVID-19 API(Track the every single activity of this pandemic)
 
 > Serving data from John Hopkins University CSSE as a [JSON API](https://covid19.mathdro.id)
 
