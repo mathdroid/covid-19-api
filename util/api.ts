@@ -72,7 +72,7 @@ export const getConfirmedGraph = async (resultOffset = 0) => {
         where: `(UID <> 840) AND (Confirmed<>0)`,
         returnGeometry: false,
         spatialRel: `esriSpatialRelIntersects`,
-        outFields: `*`,
+        outFields: `OBJECTID,Last_Update,Country_Region,Confirmed,Delta_Confirmed,Delta_Recovered,Recovered,Deaths,Active,Incident_Rate,People_Tested`,
         orderByFields: `Last_Update asc`,
         resultOffset,
         resultRecordCount: 1000,
