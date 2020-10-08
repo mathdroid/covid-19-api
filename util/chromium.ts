@@ -1,10 +1,10 @@
-import { chromium } from "playwright-core";
+import * as playwright from "playwright-aws-lambda";
 import { getOptions } from "./options";
 
 
 async function getPage(isDev: boolean) {
   const options = await getOptions(isDev);
-  const browser = await chromium.launch(options);
+  const browser = await playwright.launchChromium(options);
   const context = await browser.newContext();
   const _page = await context.newPage();
   return _page;
