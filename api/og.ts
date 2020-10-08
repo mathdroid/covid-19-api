@@ -9,9 +9,9 @@ import {
   getLastUpdate,
   getDailyCases
 } from "../util/api";
-import capture from 'capture-screenshot-phantomjs';
-const isDev = process.env.NOW_REGION === "dev1";
-import * as playwright from 'playwright-aws-lambda';
+
+// const isDev = process.env.NOW_REGION === "dev1";
+const isDev = false;
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   try {
@@ -25,13 +25,13 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       recovered,
       deaths,
       lastUpdate,
-      dailyCases
+    //   dailyCases
     ] = await Promise.all([
       getTotalConfirmed(),
       getTotalRecovered(),
       getTotalDeaths(),
       getLastUpdate(),
-      getDailyCases()
+    //   getDailyCases()
     ]);
     // console.log({
     //   confirmed,
@@ -44,7 +44,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       recovered,
       deaths,
       lastUpdate,
-      dailyCases,
+      dailyCases:[],
       width,
       height
     });
@@ -58,35 +58,13 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     const filePath = await writeTempFile(text, html);
     // console.log({ filePath });
     const fileUrl = pathToFileURL(filePath);
-const browser = await playwright.launchChromium();
-  // Create a page with the Open Graph image size best practise
-  const page = await browser.newPage({
-    viewport: {
-      width: 1200,
-      height: 630
-    }
-  });
-  // Generate the full URL out of the given path (GET parameter)
-  const url = fileUrl
-  await page.goto(url, {
-    timeout: 15 * 1000
-  })
-  const data = await page.screenshot({
-    type: "png"
-  })
-  await browser.close()
-  // Set the s-maxage property which caches the images then on the Vercel edge
-//   res.setHeader("Cache-Control", "s-maxage=31536000, stale-while-revalidate")
-  res.setHeader('Content-Type', 'image/png')
-  // write the image to the response with the specified Content-Type
-  res.end(data)
-    // const file = await getScreenshot(fileUrl, isDev, width, height);
-    // res.setHeader("Content-Type", `image/png`);
-    // res.end(file);
+    const file = await getScreenshot(fileUrl, isDev, width, height);
+    res.setHeader("Content-Type", `image/png`);
+    res.end(file);
   } catch (e) {
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");
-    res.end("s");
+    res.end("<h1>Internal Error</h1><p>Sorry, there was a problem</p>");
     console.error(e);
   }
 }
