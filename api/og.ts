@@ -12,6 +12,7 @@ import {
 
 const isDev = process.env.NOW_REGION === "dev1";
 
+
 export default async function handler(req: NowRequest, res: NowResponse) {
   try {
     const width = parseInt(req.query.width as string, 10) || 1200;
@@ -63,7 +64,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   } catch (e) {
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");
-    res.end("<h1>Internal Error</h1><p>Sorry, there was a problem</p>");
+    res.end(e.message);
     console.error(e);
   }
 }

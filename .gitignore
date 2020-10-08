@@ -111,3 +111,4 @@ temp/
 # End of https://www.gitignore.io/api/node
 
 .now
+.vercel
