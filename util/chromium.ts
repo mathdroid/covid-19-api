@@ -1,15 +1,12 @@
-import { launch, Page } from "puppeteer-core";
+import { chromium } from "playwright-core";
 import { getOptions } from "./options";
 
-let _page: Page | null;
 
 async function getPage(isDev: boolean) {
-  if (_page) {
-    return _page;
-  }
   const options = await getOptions(isDev);
-  const browser = await launch(options);
-  _page = await browser.newPage();
+  const browser = await chromium.launch(options);
+  const context = await browser.newContext();
+  const _page = await context.newPage();
   return _page;
 }
 
@@ -20,7 +17,7 @@ export async function getScreenshot(
   height: number = 627
 ) {
   const page = await getPage(isDev);
-  await page.setViewport({ width, height });
+  await page.setViewportSize({ width, height });
   await page.goto(url);
   const file = await page.screenshot({ type: "png" });
   return file;
