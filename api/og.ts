@@ -1,65 +1,16 @@
 import { NowResponse, NowRequest } from "@now/node";
-import { getHtml } from "../util/template";
-import { writeTempFile, pathToFileURL } from "../util/file";
-import { getScreenshot } from "../util/chromium";
-import {
-  getTotalConfirmed,
-  getTotalRecovered,
-  getTotalDeaths,
-  getLastUpdate,
-  getDailyCases
-} from "../util/api";
-
-const isDev = process.env.NOW_REGION === "dev1";
-
+import sharp from "sharp"
+import unfetch from "isomorphic-unfetch";
+import withRetry from "@zeit/fetch-retry";
+const fetch = withRetry(unfetch);
 export default async function handler(req: NowRequest, res: NowResponse) {
   try {
     const width = parseInt(req.query.width as string, 10) || 1200;
     const height = parseInt(req.query.height as string, 10) || 627;
-    const isHtmlDebug =
-      isDev &&
-      (process.env.OG_HTML_DEBUG === "1" || req.query.debug === "true");
-    // const [
-    //   confirmed,
-    //   recovered,
-    //   deaths,
-    //   lastUpdate,
-    //   dailyCases
-    // ] = await Promise.all([
-    //   getTotalConfirmed(),
-    //   getTotalRecovered(),
-    //   getTotalDeaths(),
-    //   getLastUpdate(),
-    //   getDailyCases()
-    // ]);
-    // // console.log({
-    // //   confirmed,
-    // //   recovered,
-    // //   deaths,
-    // //   lastUpdate
-    // // });
-    // const html = getHtml({
-    //   confirmed,
-    //   recovered,
-    //   deaths,
-    //   lastUpdate,
-    //   dailyCases,
-    //   width,
-    //   height
-    // });
-    // if (isHtmlDebug) {
-    //   res.setHeader("Content-Type", "text/html");
-    //   res.end(html);
-    //   return;
-    // }
-    // const text = "textwoot";
-    // // console.log("writing html", html);
-    // const filePath = await writeTempFile(text, html);
-    // // console.log({ filePath });
-    // const fileUrl = pathToFileURL(filePath);
-    const file = await getScreenshot("https://google.com", isDev, width, height);
+    const response=await fetch('https://github.com/spiritbro1/covid-19-api-cron/raw/main/og.png')
+    const result=response.body.pipe(sharp().resize({width, height,fit:"contain"}).png())
     res.setHeader("Content-Type", `image/png`);
-    res.end(file);
+    result.pipe(res)
   } catch (e) {
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");
