@@ -19,45 +19,45 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     const isHtmlDebug =
       isDev &&
       (process.env.OG_HTML_DEBUG === "1" || req.query.debug === "true");
-    const [
-      confirmed,
-      recovered,
-      deaths,
-      lastUpdate,
-      dailyCases
-    ] = await Promise.all([
-      getTotalConfirmed(),
-      getTotalRecovered(),
-      getTotalDeaths(),
-      getLastUpdate(),
-      getDailyCases()
-    ]);
-    // console.log({
+    // const [
     //   confirmed,
     //   recovered,
     //   deaths,
-    //   lastUpdate
+    //   lastUpdate,
+    //   dailyCases
+    // ] = await Promise.all([
+    //   getTotalConfirmed(),
+    //   getTotalRecovered(),
+    //   getTotalDeaths(),
+    //   getLastUpdate(),
+    //   getDailyCases()
+    // ]);
+    // // console.log({
+    // //   confirmed,
+    // //   recovered,
+    // //   deaths,
+    // //   lastUpdate
+    // // });
+    // const html = getHtml({
+    //   confirmed,
+    //   recovered,
+    //   deaths,
+    //   lastUpdate,
+    //   dailyCases,
+    //   width,
+    //   height
     // });
-    const html = getHtml({
-      confirmed,
-      recovered,
-      deaths,
-      lastUpdate,
-      dailyCases,
-      width,
-      height
-    });
-    if (isHtmlDebug) {
-      res.setHeader("Content-Type", "text/html");
-      res.end(html);
-      return;
-    }
-    const text = "textwoot";
-    // console.log("writing html", html);
-    const filePath = await writeTempFile(text, html);
-    // console.log({ filePath });
-    const fileUrl = pathToFileURL(filePath);
-    const file = await getScreenshot(fileUrl, isDev, width, height);
+    // if (isHtmlDebug) {
+    //   res.setHeader("Content-Type", "text/html");
+    //   res.end(html);
+    //   return;
+    // }
+    // const text = "textwoot";
+    // // console.log("writing html", html);
+    // const filePath = await writeTempFile(text, html);
+    // // console.log({ filePath });
+    // const fileUrl = pathToFileURL(filePath);
+    const file = await getScreenshot("https://google.com", isDev, width, height);
     res.setHeader("Content-Type", `image/png`);
     res.end(file);
   } catch (e) {
