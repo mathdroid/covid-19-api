@@ -8,7 +8,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     const width = parseInt(req.query.width as string, 10) || 1200;
     const height = parseInt(req.query.height as string, 10) || 627;
     const response=await fetch('https://github.com/spiritbro1/covid-19-api-cron/raw/main/og.png')
-    const result=response.body.pipe(sharp().resize({width, height,fit:"contain"}).png())
+    const result=response.body.pipe(sharp().resize({width, height,fit:"contain",background:"white"}).png())
     res.setHeader("Content-Type", `image/png`);
     result.pipe(res)
   } catch (e) {
