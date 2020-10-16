@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@zeit/fetch-retry": "^5.0.0",
+    "@zeit/fetch-retry": "^5.0.1",
     "chrome-aws-lambda": "^2.1.1",
     "csv-parse": "^4.12.0",
     "isomorphic-unfetch": "^3.1.0",
