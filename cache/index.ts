@@ -4,9 +4,8 @@ import * as fs from "fs";
 import { promisify } from "util";
 import format from "date-fns/format";
 (async () => {
-  console.log("s");
   const [statusOg, statusDaily] = await Promise.all([og(), daily()]);
-  console.log("iter");
+
   const write = promisify(fs.writeFile);
   const writeReadme = `{
 "date":"${format(new Date(), "cccc, dd LLLL yyyy HH:mm:ss")}",
