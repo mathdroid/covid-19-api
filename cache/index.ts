@@ -8,9 +8,9 @@ import format from "date-fns/format";
 
   const write = promisify(fs.writeFile);
   const writeReadme = `{
-"date":"${format(new Date(), "cccc, dd LLLL yyyy HH:mm:ss")}",
-"og_status":"${statusOg ? "success" : "error"}",
-"daily_status":"${statusDaily ? "success" : "error"}"
+"last_cron_date":"${format(new Date(), "cccc, dd LLLL yyyy HH:mm:ss")}",
+"og_cron_status":"${statusOg ? "success" : "error"}",
+"daily_cron_status":"${statusDaily ? "success" : "error"}"
 }  
       `;
   await write("cache/status.json", writeReadme);
