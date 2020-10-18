@@ -5,7 +5,7 @@ const fetch = withRetry(unfetch);
 export default async function handler(req: NowRequest, res: NowResponse) {
   try{
     const result = await fetch(
-      "https://github.com/spiritbro1/covid-19-api/releases/download/saved_data/status.json"
+      "https://github.com/mathdroid/covid-19-api/releases/download/saved_data/status.json"
     );
     const badge = await result.json();
     res.json({
