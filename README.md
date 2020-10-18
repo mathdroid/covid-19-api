@@ -4,9 +4,9 @@
 
 # COVID-19 API
 
-![last_cron_date](https://img.shields.io/endpoint?url=https://1dc25e056ef1.ngrok.io/api/statusbadge?status=last_cron_date&style=for-the-badge)
-![og_cron_status](https://img.shields.io/endpoint?url=https://1dc25e056ef1.ngrok.io/api/statusbadge?status=og_cron_status&style=for-the-badge)
-![daily_cron_status](https://img.shields.io/endpoint?url=https://1dc25e056ef1.ngrok.io/api/statusbadge?status=daily_cron_status&style=for-the-badge)
+![last_cron_date](https://img.shields.io/endpoint?url=https://1dc25e056ef1.ngrok.io/api/statusbadge?status=last_cron_date&style=flat-square)
+![og_cron_status](https://img.shields.io/endpoint?url=https://1dc25e056ef1.ngrok.io/api/statusbadge?status=og_cron_status&style=flat-square)
+![daily_cron_status](https://img.shields.io/endpoint?url=https://1dc25e056ef1.ngrok.io/api/statusbadge?status=daily_cron_status&style=flat-square)
 
 > Serving data from John Hopkins University CSSE as a [JSON API](https://covid19.mathdro.id)
 
