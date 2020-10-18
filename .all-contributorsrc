@@ -1,0 +1,25 @@
+{
+  "projectName": "covid-19-api",
+  "projectOwner": "mathdroid",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "mathdroid",
+      "name": "Odi",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3748658?v=4",
+      "profile": "https://mathdro.id/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
