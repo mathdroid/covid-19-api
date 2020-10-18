@@ -1,6 +1,6 @@
 <p align="center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
   <img width="500" src="https://covid19.mathdro.id/api/og" />
 </p>
@@ -194,6 +194,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://mathdro.id/"><img src="https://avatars2.githubusercontent.com/u/3748658?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Odi</b></sub></a><br /><a href="https://github.com/mathdroid/covid-19-api/commits?author=mathdroid" title="Code">💻</a> <a href="https://github.com/mathdroid/covid-19-api/commits?author=mathdroid" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/k1m0ch1"><img src="https://avatars0.githubusercontent.com/u/5756522?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yahya Fadhlulloh Al-Fatih</b></sub></a><br /><a href="https://github.com/mathdroid/covid-19-api/commits?author=k1m0ch1" title="Code">💻</a></td>
   </tr>
 </table>
 
