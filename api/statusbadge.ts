@@ -9,7 +9,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   const badge = await result.json();
   res.json({
     schemaVersion: 1,
-    label: (<string>req.query.status).replace(/_/, " "),
+    label: (<string>req.query.status).replace(/_/g, " "),
     message: badge[req.query.status],
     color: req.query.status === "error" ? "red" : "green",
   });
