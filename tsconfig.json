@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "strict": false,
-    "esModuleInterop": true,
-    "lib": ["esnext"],
-    "target": "ES2018",
     "module": "commonjs",
-    "sourceMap": false,
-    "declaration": true
-  }
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "cache/dist"
+  },
+  "lib": ["es2015"],
+  "exclude": ["api"]
 }

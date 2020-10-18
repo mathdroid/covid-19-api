@@ -1,11 +1,15 @@
 import { readFileSync } from "fs";
 
 const regularInter = readFileSync(
-  `${__dirname}/../fonts/Inter-Regular.woff2`
+  `${__dirname}/../../../fonts/Inter-Regular.woff2`
 ).toString("base64");
 const boldInter = readFileSync(
-  `${__dirname}/../fonts/Inter-Bold.woff2`
+  `${__dirname}/../../../fonts/Inter-Bold.woff2`
 ).toString("base64");
+
+function formatNumber(num: number): string {
+  return new Intl.NumberFormat('en-US').format(num);
+}
 
 function getCss(width: number, height: number) {
   return `
@@ -34,21 +38,23 @@ body {
 }
   .wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
     height: 100%;
+    width: 100%;
   }
 
   .data-wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-flow: column wrap;
+    flex-grow: 1;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    padding: 2rem 5rem;
   }
 
   .data {
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -60,15 +66,11 @@ body {
   .value {
     font-weight: bold;
     font-size: 5rem;
-    margin-top: 1rem;
+    margin-top: .5rem;
   }
 
   .font-inter {
     font-family: 'Inter', sans-serif;
-  }
-
-  b {
-    margin-left: 0.5rem;
   }
 
   /* line with highlight area */
@@ -127,7 +129,7 @@ export function getHtml(parsedReq: ParsedRequest) {
     <style>
         ${getCss(width, height)}
     </style>
-    <script src="https://cdn.rawgit.com/fnando/sparkline/master/dist/sparkline.js"></script>
+    <script src="https://unpkg.com/@fnando/sparkline@0.3.10/dist/sparkline.js"></script>
   </head>
   <body>
   
@@ -168,28 +170,41 @@ export function getHtml(parsedReq: ParsedRequest) {
       : ""
   }
       <div class="wrapper">
-        <div class="data-wrapper font-inter" style="font-weight: bold; font-size: 2rem; justify-content: flex-start; padding: 2rem 2rem; display: flex;flex-direction: column;align-items: flex-start;">
-          <h1 style="margin: 0;font-size: 2rem;font-weight: normal; letter-spacing: 1px;">COVID-19 API</h1>
-          <h2 style="margin: 0;">${countryRegion || "Global"}</h2>
+        <div class="data-wrapper font-inter" style="font-weight: bold; font-size: 2rem; justify-content: flex-start; display: flex; flex-direction: column;align-items: flex-start; flex-grow: 0;">
+          <div>
+            <h1 style="margin: 0;font-size: 2rem;font-weight: normal; letter-spacing: 1px;">COVID-19 API</h1>
+            <h2 style="margin: 0;">${countryRegion || "Global"}</h2>
+          </div>
+          <div style="font-size: 1rem; font-weight: 400; margin-top: auto;">
+            <p>Last Update:</p>
+            <p style="margin-top: -0.8rem;">
+              <b>${lastUpdate}</b>
+            </p>
+            <p style="margin-bottom: 0;">
+              With ♥ by <b>@mathdroid</b>
+            </p>
+          </div>
         </div>
-        <div class="data-wrapper" style="justify-content: space-between; flex: 1; padding: 0 2rem;">
+        <div class="data-wrapper">
           <div class="data">
             <div class="heading font-inter">Confirmed</div>
-            <div class="value font-inter">${confirmed}</div>
+            <div class="value font-inter">${formatNumber(confirmed)}</div>
             ${
               dailyCases.length > 0
                 ? `<div class="heading font-inter" style="font-size: 1.25rem;background: orange;color: white;line-height: 1.5;padding: 0 0.5rem;"><b style="margin: 0;">${
-                    dailyCases.slice(-1)[0].otherLocations
-                  }</b> outside China <b style="margin: 0;">(${Math.trunc(
-                    (dailyCases.slice(-1)[0].otherLocations / confirmed) * 100
-                  )}%)</b></div>`
+                    formatNumber(dailyCases.slice(-1)[0].otherLocations)
+                  }</b> outside China <b style="margin: 0;">(${
+                    Math.trunc(
+                      (dailyCases.slice(-1)[0].otherLocations / confirmed) * 100
+                    )
+                  }%)</b></div>`
                 : ""
             }
           </div>
 
           <div class="data">
             <div class="heading font-inter">Recovered</div>
-            <div class="value font-inter" style="color:green;">${recovered}</div>
+            <div class="value font-inter" style="color:green;">${formatNumber(recovered)}</div>
             <div class="heading font-inter" style="font-size: 1.25rem;background: green;color: white;line-height: 1.5;padding: 0 0.5rem;"><b style="margin: 0;">${Math.trunc(
               (recovered / confirmed) * 100
             )}%</b> recovery rate</div>
@@ -197,15 +212,12 @@ export function getHtml(parsedReq: ParsedRequest) {
 
           <div class="data">
             <div class="heading font-inter">Deaths</div>
-            <div class="value font-inter" style="color:red;">${deaths}</div>
+            <div class="value font-inter" style="color:red;">${formatNumber(deaths)}</div>
             <div class="heading font-inter" style="font-size: 1.25rem;background: red;color: white;line-height: 1.5;padding: 0 0.5rem;"><b style="margin: 0; ">${Math.trunc(
               (deaths / confirmed) * 100
             )}%</b> fatality rate</div>
           </div>
         </div>
-        <div class="data-wrapper font-inter" style="margin: 2rem auto;">
-          Last Update: <b>${lastUpdate}</b>. With ♥️ by <b>@mathdroid</b>
-        <div>
       </div>
   </body>
 </html>`;

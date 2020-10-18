@@ -1,0 +1,76 @@
+name: SCHEDULE
+
+on: 
+ push: 
+  branches: 
+   - master  
+ schedule:
+   - cron : '0 * * * *'
+
+jobs:
+  store:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Set up nodejs and install dependencies
+      uses: actions/setup-node@v1
+      with:
+       node-version: '12'
+    - name: install yarn  
+      run: npm install -g yarn
+    - name: install dependency  
+      run: yarn
+    - name: run script
+      run: yarn start:cache
+    - uses: dev-drprasad/delete-tag-and-release@v0.1.2
+      with:
+        delete_release: true # default: false
+        tag_name: ${{ github.ref }} # tag name to delete
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+        
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: saved data
+        draft: false
+        prerelease: false
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./cache/og.png
+        asset_name: og.png
+        asset_content_type: image/png
+       
+    - name: Upload Release Asset
+      id: upload-json
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./cache/daily.json
+        asset_name: daily.json
+        asset_content_type: application/json
+       
+    - name: Upload Release Asset
+      id: uploadreadme
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        asset_path: ./cache/status.json
+        asset_name: status.json
+        asset_content_type: application/json
