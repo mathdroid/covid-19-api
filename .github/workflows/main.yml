@@ -25,6 +25,10 @@ jobs:
       run: yarn
     - name: run script
       run: yarn start:cache
+    - name: Delete drafts
+      uses: hugo19941994/delete-draft-releases@v0.1.0
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - uses: dev-drprasad/delete-tag-and-release@v0.1.2
       with:
         delete_release: true # default: false
