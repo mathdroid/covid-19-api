@@ -18,7 +18,7 @@ jobs:
     - name: Set up nodejs and install dependencies
       uses: actions/setup-node@v1
       with:
-       node-version: '12'
+       node-version: '14'
     - name: install yarn  
       run: npm install -g yarn
     - name: install dependency  
