@@ -3,7 +3,7 @@ name: SCHEDULE
 on: 
  push: 
   branches: 
-   - develop  
+   - master  
  schedule:
    - cron : '0 * * * *'
 
