@@ -23,7 +23,7 @@
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
     "@now/node": "^1.8.4",
-    "@types/jest": "^26.0.14",
+    "@types/jest": "^26.0.15",
     "@types/qs": "^6.9.5",
     "all-contributors-cli": "^6.19.0",
     "babel-jest": "^26.5.2",
