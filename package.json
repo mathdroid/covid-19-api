@@ -16,7 +16,7 @@
     "pbf": "^3.2.1",
     "puppeteer-core": "^2.1.1",
     "qs": "^6.9.4",
-    "sharp": "^0.26.2"
+    "sharp": "^0.26.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
