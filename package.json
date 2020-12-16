@@ -10,7 +10,7 @@
   "dependencies": {
     "@zeit/fetch-retry": "^5.0.1",
     "chrome-aws-lambda": "^2.1.1",
-    "csv-parse": "^4.14.1",
+    "csv-parse": "^4.14.2",
     "date-fns": "^2.16.1",
     "isomorphic-unfetch": "^3.1.0",
     "pbf": "^3.2.1",
