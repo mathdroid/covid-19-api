@@ -177,6 +177,8 @@
 
 - [https://github.com/ZuTechV2/c19stats](https://github.com/ZuTechV2/c19stats), [https://zu-c19stats.netlify.app](https://zu-c19stats.netlify.app), (VueJS) by [Zu Tech V2](https://github.com/ZuTechV2)
 
+- [https://infocov.netlify.app](https://infocov.netlify.app), (VueJS) by [Ahmad Ali Azhary](https://github.com/ahmdali25)
+
 
 ## License
 
