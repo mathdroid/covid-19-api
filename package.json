@@ -19,7 +19,7 @@
     "sharp": "^0.26.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.13",
+    "@babel/core": "^7.12.16",
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-typescript": "^7.12.16",
     "@now/node": "^1.8.5",
