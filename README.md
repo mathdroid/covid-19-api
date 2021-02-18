@@ -177,6 +177,8 @@
 
 - [https://github.com/ZuTechV2/c19stats](https://github.com/ZuTechV2/c19stats), [https://zu-c19stats.netlify.app](https://zu-c19stats.netlify.app), (VueJS) by [Zu Tech V2](https://github.com/ZuTechV2)
 
+- [https://netmagik.github.io/Covid-Tracker/](https://netmagik.github.io/Covid-Tracker/), [https://github.com/netmagik/Covid-Tracker](https://github.com/netmagik/Covid-Tracker) (React) by [Irina Blumenfeld](https://github.com/netmagik)
+
 
 ## License
 
