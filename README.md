@@ -177,6 +177,8 @@
 
 - [https://github.com/ZuTechV2/c19stats](https://github.com/ZuTechV2/c19stats), [https://zu-c19stats.netlify.app](https://zu-c19stats.netlify.app), (VueJS) by [Zu Tech V2](https://github.com/ZuTechV2)
 
+-  [https://covid19track-d61e7.web.app/](https://covid19track-d61e7.web.app), (React) by [Kalana](https://github.com/ffalpha)
+
 
 ## License
 
