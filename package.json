@@ -15,7 +15,7 @@
     "isomorphic-unfetch": "^3.1.0",
     "pbf": "^3.2.1",
     "puppeteer-core": "^2.1.1",
-    "qs": "^6.9.6",
+    "qs": "^6.10.0",
     "sharp": "^0.26.3"
   },
   "devDependencies": {
