@@ -29,7 +29,7 @@
     "babel-jest": "^27.0.1",
     "jest": "^27.0.3",
     "objects-to-csv": "^1.3.6",
-    "puppeteer": "^9.1.1",
+    "puppeteer": "^10.0.0",
     "typescript": "^4.3.2"
   }
 }
