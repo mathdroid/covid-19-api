@@ -52,6 +52,19 @@ export const getTotalDeaths = async (countryName?: string) => {
   );
 };
 
+export const getPrediction = async(countryName?: string) => {
+  let cr = getTotalRecovered(countryName)
+  let cd = getTotalDeaths(countryName)
+  let cc = getTotalConfirmed(countryName)
+  let rr = cr/cc
+  let dr = cd/cc
+  let dataexport = {
+    "deaths": cd+cd*dr,
+    "recovered": cr+cr*rr
+  }
+  return dataexport
+}
+
 export const getLastUpdate = async (countryName?: string) => {
   const f = await fetchFeatures(
     endpoints.casesCounty,
