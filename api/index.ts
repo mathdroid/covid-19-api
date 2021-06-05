@@ -4,14 +4,18 @@ import {
   getTotalConfirmed,
   getTotalRecovered,
   getTotalDeaths,
-  getLastUpdate
+  getLastUpdate,
+  getPredicitonDeaths,
+  getPredictionRecov
 } from "../util/api";
 
 export default async (_, response: NowResponse) => {
-  const [confirmed, recovered, deaths, lastUpdate] = await Promise.all([
+  const [confirmed, recovered, deaths, projected_recovered, projected_dead, lastUpdate] = await Promise.all([
     getTotalConfirmed(),
     getTotalRecovered(),
     getTotalDeaths(),
+    getPredictionRecov(),
+    getPredictionDeaths(),
     getLastUpdate()
   ]);
 
@@ -28,6 +32,8 @@ export default async (_, response: NowResponse) => {
       value: deaths,
       detail: "https://covid19.mathdro.id/api/deaths"
     },
+    projectedDeaths: projected_dead,
+    projectedRecovered: projected_recovered,
     dailySummary: "https://covid19.mathdro.id/api/daily",
     dailyTimeSeries: {
       pattern: "https://covid19.mathdro.id/api/daily/[dateString]",
