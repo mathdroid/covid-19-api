@@ -30,6 +30,6 @@
     "jest": "^27.0.4",
     "objects-to-csv": "^1.3.6",
     "puppeteer": "^10.0.0",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.4"
   }
 }
