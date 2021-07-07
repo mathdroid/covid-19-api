@@ -24,7 +24,7 @@
     "@babel/preset-typescript": "^7.14.5",
     "@now/node": "^1.8.5",
     "@types/jest": "^26.0.23",
-    "@types/qs": "^6.9.6",
+    "@types/qs": "^6.9.7",
     "all-contributors-cli": "^6.20.0",
     "babel-jest": "^27.0.6",
     "jest": "^27.0.6",
