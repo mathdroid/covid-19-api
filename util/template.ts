@@ -1,10 +1,10 @@
 import { readFileSync } from "fs";
 
 const regularInter = readFileSync(
-  `${__dirname}/../../../fonts/Inter-Regular.woff2`
+  `${__dirname}/../fonts/Inter-Regular.woff2`
 ).toString("base64");
 const boldInter = readFileSync(
-  `${__dirname}/../../../fonts/Inter-Bold.woff2`
+  `${__dirname}/../fonts/Inter-Bold.woff2`
 ).toString("base64");
 
 function formatNumber(num: number): string {
