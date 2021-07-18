@@ -176,6 +176,7 @@
 - [https://covid19.sznm.dev](https://covid19.sznm.dev), (Gatsby, Nivo) by [Agustinus Nathaniel](https://github.com/sozonome)
 
 - [https://github.com/ZuTechV2/c19stats](https://github.com/ZuTechV2/c19stats), [https://zu-c19stats.netlify.app](https://zu-c19stats.netlify.app), (VueJS) by [Zu Tech V2](https://github.com/ZuTechV2)
+- [LIVE COVID-19 Informative React](https://aayushtyagi1.github.io/React-Covid-19-Dashboard/), by [Aayush Tyagi](https://github.com/AayushTyagi1)
 
 
 ## License
