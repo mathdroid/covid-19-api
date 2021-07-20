@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "@zeit/fetch-retry": "^5.0.1",
-    "chrome-aws-lambda": "^2.1.1",
+    "chrome-aws-lambda": "^10.0.0",
     "csv-parse": "^4.16.0",
     "date-fns": "^2.22.1",
     "isomorphic-unfetch": "^3.1.0",
     "pbf": "^3.2.1",
-    "puppeteer-core": "^2.1.1",
+    "puppeteer-core": "^10.1.0",
     "qs": "^6.10.1",
     "sharp": "^0.26.3"
   },
