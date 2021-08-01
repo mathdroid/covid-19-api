@@ -61,6 +61,8 @@
 
 ## Showcase
 
+- [covid19-tracker](https://senpai-10.github.io/covid19-tracker), (React) by [senpai-10](https://github.com/Senpai-10)
+
 - [Create a Github Action that Send Everyday Covid19 Status Through Telegram Using Python](https://dev.to/spiritbro1/create-a-github-action-that-send-everyday-covid19-status-through-telegram-using-python-3l78), (Telegram Bot) by [catflip](https://github.com/catflip)
 
 - [17 responsible live visualizations about the coronavirus, for you to use](https://blog.datawrapper.de/coronaviruscharts/), (Web) by [Datawrapper](https://datawrapper.de)
