@@ -177,6 +177,7 @@
 
 - [https://github.com/ZuTechV2/c19stats](https://github.com/ZuTechV2/c19stats), [https://zu-c19stats.netlify.app](https://zu-c19stats.netlify.app), (VueJS) by [Zu Tech V2](https://github.com/ZuTechV2)
 
+- [Github: Africa vs COVID-19](https://github.com/AfricaDevs/APP-SANTE-AFRIQUE-VS-COVID19-TOA-Android), [Download release APK on Github](https://github.com/AfricaDevs/APP-SANTE-AFRIQUE-VS-COVID19-TOA-Android/releases/download/1.1/toa-v1.1_French.apk), (Java, XML) by [AFRICA Devs Open Source community](https://github.com/AfricaDevs)
 
 ## License
 
