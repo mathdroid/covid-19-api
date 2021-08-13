@@ -177,6 +177,7 @@
 
 - [https://github.com/ZuTechV2/c19stats](https://github.com/ZuTechV2/c19stats), [https://zu-c19stats.netlify.app](https://zu-c19stats.netlify.app), (VueJS) by [Zu Tech V2](https://github.com/ZuTechV2)
 
+- [https://github.com/Namchee/COVID-19-LINE-Bot](https://github.com/Namchee/COVID-19-LINE-Bot), (NodeJS, LINE chatbot) by [Namchee](https://github.com/Namchee)
 
 ## License
 
