@@ -177,6 +177,8 @@
 
 - [https://github.com/ZuTechV2/c19stats](https://github.com/ZuTechV2/c19stats), [https://zu-c19stats.netlify.app](https://zu-c19stats.netlify.app), (VueJS) by [Zu Tech V2](https://github.com/ZuTechV2)
 
+- [pantaucorona](https://pantaucorona.now.sh/), (React) by [dytra](https://github.com/dytra)
+
 
 ## License
 
