@@ -177,6 +177,7 @@
 
 - [https://github.com/ZuTechV2/c19stats](https://github.com/ZuTechV2/c19stats), [https://zu-c19stats.netlify.app](https://zu-c19stats.netlify.app), (VueJS) by [Zu Tech V2](https://github.com/ZuTechV2)
 
+- [https://github.com/fiqryq/Pantaucovid-vue](https://github.com/fiqryq/Pantaucovid-vue) , [https://github.com/fiqryq/Pantaucovid-discord](https://github.com/fiqryq/Pantaucovid-discord) , (VueJs,DiscordJs) by [Fiqry choerudin](https://github.com/fiqryq)
 
 ## License
 
