@@ -65,6 +65,8 @@
 
 - [17 responsible live visualizations about the coronavirus, for you to use](https://blog.datawrapper.de/coronaviruscharts/), (Web) by [Datawrapper](https://datawrapper.de)
 
+- [How to Import JSON Data From This API Into Google Sheets With Auto Refresh and Create a COVID-19 Datawrapper Widget](https://medium.com/@simondhaas/import-json-data-google-sheets-auto-refresh-covid-19-widget-6cf34946e869), (Web) by [Simon](https://github.com/somm-doe)
+
 - [Android kotlin-mvvm-covid19](https://github.com/rizmaulana/kotlin-mvvm-covid19), (Android) by [Rizki Maulana](https://github.com/rizmaulana)
 
 - [CovidNow](https://github.com/OMIsie11/CovidNow), (Android) by [Oskar Misiewicz](https://github.com/OMIsie11)
