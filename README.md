@@ -171,11 +171,14 @@
 
 - [https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker](https://github.com/AbdullahChauhan/Coronavirus-COVID-19-Tracker), (Flutter) by [Abdullah Chauhan](https://github.com/AbdullahChauhan)
 
+- [https://github.com/awesome-cli/coronavirus-report](https://github.com/awesome-cli/coronavirus-report), (Node, Commander) by [Jakub Biesiada](https://github.com/JB1905)
+
 - [https://github.com/dynamicbalaji/covid19-tracker](https://github.com/dynamicbalaji/covid19-tracker), (React) by [Balaji Ashok Kumar(BK)](https://github.com/dynamicbalaji)
 
 - [https://covid19.sznm.dev](https://covid19.sznm.dev), (Gatsby, Nivo) by [Agustinus Nathaniel](https://github.com/sozonome)
 
 - [https://github.com/ZuTechV2/c19stats](https://github.com/ZuTechV2/c19stats), [https://zu-c19stats.netlify.app](https://zu-c19stats.netlify.app), (VueJS) by [Zu Tech V2](https://github.com/ZuTechV2)
+
 
 
 ## License
