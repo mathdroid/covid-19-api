@@ -55,7 +55,7 @@
 
 2. Install deps (`yarn`, `npm install`)
 
-3. Install and register to [ZEIT Now](https://zeit.co/now) if you haven't. This project is exclusively made for the platform.
+3. Install and register to [Vercel Now](https://vercel.com) if you haven't. This project is exclusively made for the platform.
 
 4. `now dev` to run a local dev deployment, `now` to publish.
 
