@@ -7,6 +7,8 @@
 
 # COVID-19 API
 
+> No longer maintaining the official deployment. Please fork this repo and use it for your own purpose.
+
 ![last_cron_date](https://img.shields.io/endpoint?url=https://covid19.mathdro.id/api/statusbadge?status=last_cron_date&style=flat-square)
 ![og_cron_status](https://img.shields.io/endpoint?url=https://covid19.mathdro.id/api/statusbadge?status=og_cron_status&style=flat-square)
 ![daily_cron_status](https://img.shields.io/endpoint?url=https://covid19.mathdro.id/api/statusbadge?status=daily_cron_status&style=flat-square)
@@ -49,9 +51,9 @@
 
 1. Clone
 
-    ```bash
-    git clone --depth=1 https://github.com/mathdroid/covid-19-api
-    ```
+   ```bash
+   git clone --depth=1 https://github.com/mathdroid/covid-19-api
+   ```
 
 2. Install deps (`yarn`, `npm install`)
 
@@ -111,7 +113,7 @@
 
 - [https://souryvath.github.io/ng-covid-19/](https://souryvath.github.io/ng-covid-19/), (Angular, ApexCharts) by [Souryvath NIRASAY](https://github.com/souryvath/)
 
-- [Corona-tracker](https://corona-tracker-2020.netlify.com/), (Vue frontend for the API with main focus on India) by [Akash Raju M](https://github.com/akashrajum7) 
+- [Corona-tracker](https://corona-tracker-2020.netlify.com/), (Vue frontend for the API with main focus on India) by [Akash Raju M](https://github.com/akashrajum7)
 
 - [https://github.com/satyawikananda/Vucovid-Covid-info](https://github.com/satyawikananda/Vucovid-Covid-info), (VueJS, PWA) by [Satya Wikananda](https://github.com/satyawikananda)
 
@@ -176,7 +178,6 @@
 - [https://covid19.sznm.dev](https://covid19.sznm.dev), (Gatsby, Nivo) by [Agustinus Nathaniel](https://github.com/sozonome)
 
 - [https://github.com/ZuTechV2/c19stats](https://github.com/ZuTechV2/c19stats), [https://zu-c19stats.netlify.app](https://zu-c19stats.netlify.app), (VueJS) by [Zu Tech V2](https://github.com/ZuTechV2)
-
 
 ## License
 
